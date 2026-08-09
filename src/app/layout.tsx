@@ -22,7 +22,7 @@ const playfair = Playfair_Display({
 });
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
-const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID;
+const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID || "xzf7lo2y2o";
 const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
 
 export const metadata: Metadata = {
@@ -92,8 +92,23 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} h-full antialiased selection:bg-amber-200 selection:text-stone-900`}
     >
       <head>
+        {/* Microsoft Clarity Heatmaps Script */}
+        <Script
+          id="microsoft-clarity"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(c,l,a,r,i,t,y){
+                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "${CLARITY_ID}");
+            `
+          }}
+        />
+
         {/* Google Analytics 4 Script */}
-        {GA_ID && (
+        {GA_ID && GA_ID !== "G-XXXXXXXXXX" && (
           <>
             <Script
               strategy="afterInteractive"
@@ -114,25 +129,8 @@ export default function RootLayout({
           </>
         )}
 
-        {/* Microsoft Clarity Heatmaps Script */}
-        {CLARITY_ID && (
-          <Script
-            id="microsoft-clarity"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `
-                (function(c,l,a,r,i,t,y){
-                    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-                })(window, document, "clarity", "script", "${CLARITY_ID}");
-              `
-            }}
-          />
-        )}
-
         {/* Meta Pixel Script */}
-        {META_PIXEL_ID && (
+        {META_PIXEL_ID && META_PIXEL_ID !== "000000000000000" && (
           <Script
             id="meta-pixel"
             strategy="afterInteractive"
