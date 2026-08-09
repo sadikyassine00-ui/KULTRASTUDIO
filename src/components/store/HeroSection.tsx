@@ -5,7 +5,6 @@ import Image from "next/image";
 import {
   Star,
   ShieldCheck,
-  Check,
   Sparkles,
   VolumeX,
   Layers,
@@ -15,9 +14,9 @@ import {
 } from "lucide-react";
 import { useStore } from "@/context/StoreContext";
 import { motion, AnimatePresence } from "framer-motion";
+import { VariantSelector } from "@/components/VariantSelector";
 import {
   trackAddToCart,
-  trackSelectVariant,
   trackViewProductImage,
   trackClickReviewsAnchor,
   trackClickTrustBadge
@@ -44,8 +43,7 @@ export function HeroSection() {
 
   const handleColorChange = (color: string) => {
     setSelectedColor(color);
-    trackSelectVariant(color, selectedSize);
-    if (color === "Heather Grey") {
+    if (color === "Light Ash Grey" || color === "Heather Grey") {
       setActiveImageIndex(2);
     } else {
       setActiveImageIndex(0);
@@ -54,7 +52,6 @@ export function HeroSection() {
 
   const handleSizeChange = (size: 'Medium' | 'Large') => {
     setSelectedSize(size);
-    trackSelectVariant(selectedColor, size);
   };
 
   const handleImageClick = (idx: number, altText: string) => {
@@ -259,108 +256,13 @@ export function HeroSection() {
               Full 3.0mm solid slab of pure Australian Merino wool felt with a low-profile zero-slide micro-grip dot backing. Dampens key sound and protects desk wood.
             </p>
 
-            {/* 5. Variant Selectors */}
-            <div className="space-y-2 pt-1 border-t border-stone-200/80">
-              {/* Finish Swatches */}
-              <div className="space-y-1">
-                <div className="flex items-center justify-between text-xs font-semibold">
-                  <span className="uppercase tracking-wider text-stone-700">
-                    Finish: <span className="text-stone-900 font-bold">{selectedColor}</span>
-                  </span>
-                  <span className="text-stone-500 text-[10px] uppercase">Undyed Wool</span>
-                </div>
-
-                <div className="grid grid-cols-2 gap-2">
-                  <button
-                    type="button"
-                    onClick={() => handleColorChange("Charcoal")}
-                    className={`p-2.5 rounded-xl border-2 text-left flex items-center gap-2.5 transition-all ${
-                      selectedColor === "Charcoal"
-                        ? "border-stone-900 bg-stone-900 text-stone-50 shadow-xs"
-                        : "border-stone-200 bg-white text-stone-800 hover:border-stone-300"
-                    }`}
-                  >
-                    <div className="w-3.5 h-3.5 rounded-full bg-[#262626] border border-stone-400 shadow-xs flex items-center justify-center shrink-0">
-                      {selectedColor === "Charcoal" && <Check className="w-2.5 h-2.5 text-stone-100" />}
-                    </div>
-                    <div>
-                      <div className="text-xs font-bold leading-tight">Charcoal Felt</div>
-                      <div className={`text-[10px] ${selectedColor === "Charcoal" ? "text-stone-300" : "text-stone-500"}`}>
-                        Obsidian tone
-                      </div>
-                    </div>
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={() => handleColorChange("Heather Grey")}
-                    className={`p-2.5 rounded-xl border-2 text-left flex items-center gap-2.5 transition-all ${
-                      selectedColor === "Heather Grey"
-                        ? "border-stone-900 bg-stone-900 text-stone-50 shadow-xs"
-                        : "border-stone-200 bg-white text-stone-800 hover:border-stone-300"
-                    }`}
-                  >
-                    <div className="w-3.5 h-3.5 rounded-full bg-[#8C8C8C] border border-stone-400 shadow-xs flex items-center justify-center shrink-0">
-                      {selectedColor === "Heather Grey" && <Check className="w-2.5 h-2.5 text-stone-100" />}
-                    </div>
-                    <div>
-                      <div className="text-xs font-bold leading-tight">Heather Grey</div>
-                      <div className={`text-[10px] ${selectedColor === "Heather Grey" ? "text-stone-300" : "text-stone-500"}`}>
-                        Silver wool
-                      </div>
-                    </div>
-                  </button>
-                </div>
-              </div>
-
-              {/* Dimensions Swatches */}
-              <div className="space-y-1">
-                <div className="flex items-center justify-between text-xs font-semibold">
-                  <span className="uppercase tracking-wider text-stone-700">
-                    Dimensions: <span className="text-stone-900 font-bold">{selectedSize}</span>
-                  </span>
-                  <span className="text-amber-800 font-medium text-[10px]">Standing Desks</span>
-                </div>
-
-                <div className="grid grid-cols-2 gap-2">
-                  <button
-                    type="button"
-                    onClick={() => handleSizeChange("Medium")}
-                    className={`p-2.5 rounded-xl border-2 text-left transition-all ${
-                      selectedSize === "Medium"
-                        ? "border-stone-900 bg-stone-900 text-stone-50 shadow-xs"
-                        : "border-stone-200 bg-white text-stone-800 hover:border-stone-300"
-                    }`}
-                  >
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs font-bold">Medium ($80.00)</span>
-                      {selectedSize === "Medium" && <Check className="w-3 h-3 text-amber-400" />}
-                    </div>
-                    <div className={`text-[10px] font-mono mt-0.5 ${selectedSize === "Medium" ? "text-stone-300" : "text-stone-500"}`}>
-                      80 × 30 cm
-                    </div>
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={() => handleSizeChange("Large")}
-                    className={`p-2.5 rounded-xl border-2 text-left transition-all ${
-                      selectedSize === "Large"
-                        ? "border-stone-900 bg-stone-900 text-stone-50 shadow-xs"
-                        : "border-stone-200 bg-white text-stone-800 hover:border-stone-300"
-                    }`}
-                  >
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs font-bold">Large ($95.00)</span>
-                      {selectedSize === "Large" && <Check className="w-3 h-3 text-amber-400" />}
-                    </div>
-                    <div className={`text-[10px] font-mono mt-0.5 ${selectedSize === "Large" ? "text-stone-300" : "text-stone-500"}`}>
-                      90 × 40 cm
-                    </div>
-                  </button>
-                </div>
-              </div>
-            </div>
+            {/* 5. Variant Selector Component */}
+            <VariantSelector
+              selectedColor={selectedColor}
+              selectedSize={selectedSize}
+              onSelectColor={handleColorChange}
+              onSelectSize={handleSizeChange}
+            />
 
             {/* 6. Primary Add to Cart CTA Button */}
             <div className="pt-1 flex flex-col gap-2">

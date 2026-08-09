@@ -74,7 +74,7 @@ export const FALLBACK_PRODUCT: Product = {
   images: [
     {
       url: "/images/hero_desk_mat.png",
-      altText: "Charcoal 100% Merino Wool Desk Mat on an oak wood desk"
+      altText: "Dark Charcoal 100% Merino Wool Desk Mat on an oak wood desk"
     },
     {
       url: "/images/wool_cork_texture.png",
@@ -82,7 +82,7 @@ export const FALLBACK_PRODUCT: Product = {
     },
     {
       url: "/images/heather_grey_setup.png",
-      altText: "Heather Grey 100% Merino Wool Desk Mat with workspace setup"
+      altText: "Light Ash Grey 100% Merino Wool Desk Mat with workspace setup"
     },
     {
       url: "/images/cork_base_detail.png",
@@ -99,9 +99,9 @@ export const FALLBACK_PRODUCT: Product = {
   variants: [
     {
       id: "gid://shopify/ProductVariant/charcoal-medium",
-      title: "Charcoal / Medium (80 × 30 cm)",
-      colorName: "Charcoal",
-      colorHex: "#262626",
+      title: "Dark Charcoal / Medium (80 × 30 cm)",
+      colorName: "Dark Charcoal",
+      colorHex: "#242528",
       size: "Medium",
       dimensions: "31.5\" × 11.8\" (80 × 30 cm)",
       price: { amount: "80.00", currencyCode: "USD" },
@@ -110,9 +110,9 @@ export const FALLBACK_PRODUCT: Product = {
     },
     {
       id: "gid://shopify/ProductVariant/charcoal-large",
-      title: "Charcoal / Large (90 × 40 cm)",
-      colorName: "Charcoal",
-      colorHex: "#262626",
+      title: "Dark Charcoal / Large (90 × 40 cm)",
+      colorName: "Dark Charcoal",
+      colorHex: "#242528",
       size: "Large",
       dimensions: "35.4\" × 15.7\" (90 × 40 cm)",
       price: { amount: "95.00", currencyCode: "USD" },
@@ -120,10 +120,10 @@ export const FALLBACK_PRODUCT: Product = {
       image: "/images/hero_desk_mat.png"
     },
     {
-      id: "gid://shopify/ProductVariant/heather-medium",
-      title: "Heather Grey / Medium (80 × 30 cm)",
-      colorName: "Heather Grey",
-      colorHex: "#8C8C8C",
+      id: "gid://shopify/ProductVariant/ash-medium",
+      title: "Light Ash Grey / Medium (80 × 30 cm)",
+      colorName: "Light Ash Grey",
+      colorHex: "#D1D3D4",
       size: "Medium",
       dimensions: "31.5\" × 11.8\" (80 × 30 cm)",
       price: { amount: "80.00", currencyCode: "USD" },
@@ -131,10 +131,10 @@ export const FALLBACK_PRODUCT: Product = {
       image: "/images/heather_grey_setup.png"
     },
     {
-      id: "gid://shopify/ProductVariant/heather-large",
-      title: "Heather Grey / Large (90 × 40 cm)",
-      colorName: "Heather Grey",
-      colorHex: "#8C8C8C",
+      id: "gid://shopify/ProductVariant/ash-large",
+      title: "Light Ash Grey / Large (90 × 40 cm)",
+      colorName: "Light Ash Grey",
+      colorHex: "#D1D3D4",
       size: "Large",
       dimensions: "35.4\" × 15.7\" (90 × 40 cm)",
       price: { amount: "95.00", currencyCode: "USD" },
