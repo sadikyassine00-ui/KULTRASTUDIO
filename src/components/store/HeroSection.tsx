@@ -68,7 +68,7 @@ export function HeroSection() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
         {/* Left Column: Product Showcase Gallery */}
         <div className="lg:col-span-7 flex flex-col gap-3">
-          {/* Main Showcase Image (LCP Eager Preload) */}
+          {/* Main Showcase Image (LCP Preloaded Eager Image) */}
           <div
             className="relative w-full aspect-[4/3] max-h-[360px] lg:max-h-[390px] rounded-3xl overflow-hidden bg-stone-200/80 border border-stone-300/80 shadow-lg group cursor-pointer"
             onMouseEnter={() => setIsHovered(true)}
@@ -107,7 +107,7 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Gallery Thumbnails */}
+          {/* Gallery Thumbnails (Above-the-fold Eager Loading) */}
           <div className="grid grid-cols-4 gap-2.5">
             {images.map((img, idx) => (
               <button
@@ -124,6 +124,7 @@ export function HeroSection() {
                   src={img.url}
                   alt={`KULTRA Studio Desk Mat view ${idx + 1} - ${img.altText}`}
                   fill
+                  loading="eager"
                   sizes="(max-width: 768px) 25vw, 15vw"
                   className="object-cover"
                 />
