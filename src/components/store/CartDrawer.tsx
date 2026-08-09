@@ -5,6 +5,7 @@ import Image from "next/image";
 import { X, Trash2, Plus, Minus, Lock, Truck, ArrowRight, Sparkles } from "lucide-react";
 import { useStore } from "@/context/StoreContext";
 import { motion, AnimatePresence } from "framer-motion";
+import { trackEvent } from "@/lib/analytics";
 
 export function CartDrawer() {
   const {
@@ -19,6 +20,15 @@ export function CartDrawer() {
     isCheckoutLoading,
     handleCheckout
   } = useStore();
+
+  const onCheckoutClick = () => {
+    trackEvent("begin_checkout", {
+      value: subtotal,
+      currency: "USD",
+      num_items: cart.reduce((sum, item) => sum + item.quantity, 0)
+    });
+    handleCheckout();
+  };
 
   return (
     <AnimatePresence>
@@ -188,7 +198,7 @@ export function CartDrawer() {
                     whileHover={{ scale: 1.01 }}
                     whileTap={{ scale: 0.98 }}
                     disabled={isCheckoutLoading}
-                    onClick={handleCheckout}
+                    onClick={onCheckoutClick}
                     className="w-full bg-stone-900 hover:bg-stone-800 text-stone-50 font-bold py-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 uppercase tracking-wider text-xs"
                   >
                     <Lock className="w-4 h-4 text-amber-400" />

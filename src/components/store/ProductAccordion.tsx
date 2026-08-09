@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { ChevronDown, Ruler, Globe, Truck, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { trackExpandAccordion } from "@/lib/analytics";
 
 interface AccordionItem {
   id: string;
@@ -14,8 +15,12 @@ interface AccordionItem {
 export function ProductAccordion() {
   const [openId, setOpenId] = useState<string | null>("specs");
 
-  const toggle = (id: string) => {
-    setOpenId(openId === id ? null : id);
+  const toggle = (id: string, title: string) => {
+    const nextId = openId === id ? null : id;
+    setOpenId(nextId);
+    if (nextId) {
+      trackExpandAccordion(title);
+    }
   };
 
   const items: AccordionItem[] = [
@@ -85,7 +90,7 @@ export function ProductAccordion() {
   ];
 
   return (
-    <section id="specs" className="py-16 px-4 sm:px-8 max-w-4xl mx-auto">
+    <section id="specs" aria-label="Product Accordions" className="py-16 px-4 sm:px-8 max-w-4xl mx-auto">
       <div className="text-center mb-10">
         <span className="text-[11px] font-semibold uppercase tracking-widest text-amber-800 bg-amber-100/90 border border-amber-200 px-3 py-1 rounded-full">
           Product Specifications
@@ -106,7 +111,7 @@ export function ProductAccordion() {
             >
               <button
                 type="button"
-                onClick={() => toggle(item.id)}
+                onClick={() => toggle(item.id, item.title)}
                 className="w-full p-5 text-left flex items-center justify-between gap-4 font-serif font-bold text-stone-900 text-base sm:text-lg hover:bg-stone-100/60 transition-colors"
               >
                 <div className="flex items-center gap-3">

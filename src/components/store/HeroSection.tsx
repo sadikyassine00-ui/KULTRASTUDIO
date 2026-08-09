@@ -13,6 +13,13 @@ import {
 } from "lucide-react";
 import { useStore } from "@/context/StoreContext";
 import { motion, AnimatePresence } from "framer-motion";
+import {
+  trackAddToCart,
+  trackSelectVariant,
+  trackViewProductImage,
+  trackClickReviewsAnchor,
+  trackClickTrustBadge
+} from "@/lib/analytics";
 
 export function HeroSection() {
   const {
@@ -33,11 +40,31 @@ export function HeroSection() {
 
   const handleColorChange = (color: string) => {
     setSelectedColor(color);
+    trackSelectVariant(color, selectedSize);
     if (color === "Heather Grey") {
       setActiveImageIndex(2);
     } else {
       setActiveImageIndex(0);
     }
+  };
+
+  const handleSizeChange = (size: 'Medium' | 'Large') => {
+    setSelectedSize(size);
+    trackSelectVariant(selectedColor, size);
+  };
+
+  const handleImageClick = (idx: number, altText: string) => {
+    setActiveImageIndex(idx);
+    trackViewProductImage(idx, altText);
+  };
+
+  const handleAddToCart = () => {
+    addToCart();
+    trackAddToCart({
+      name: "100% Merino Wool & Cork Desk Mat",
+      price: parseFloat(activeVariant.price.amount),
+      variant: `${selectedColor} / ${selectedSize}`
+    });
   };
 
   return (
@@ -107,12 +134,12 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Gallery Thumbnails (Above-the-fold Eager Loading) */}
+          {/* Gallery Thumbnails */}
           <div className="grid grid-cols-4 gap-2.5">
             {images.map((img, idx) => (
               <button
                 key={idx}
-                onClick={() => setActiveImageIndex(idx)}
+                onClick={() => handleImageClick(idx, img.altText)}
                 aria-label={`View photo ${idx + 1} of Merino Wool Desk Mat`}
                 className={`relative aspect-[4/3] max-h-16 rounded-xl overflow-hidden border-2 transition-all ${
                   activeImageIndex === idx
@@ -141,15 +168,19 @@ export function HeroSection() {
               <span className="text-[10px] font-semibold uppercase tracking-widest text-amber-800 bg-amber-100/90 border border-amber-200 px-2.5 py-0.5 rounded-full">
                 Natural Desk Surface
               </span>
-              <div className="flex items-center gap-1.5 text-xs">
+              <a
+                href="#reviews"
+                onClick={() => trackClickReviewsAnchor()}
+                className="flex items-center gap-1.5 text-xs hover:opacity-80 transition-opacity"
+              >
                 <div className="flex items-center text-amber-500" aria-label="Rating 4.9 out of 5 stars">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                   ))}
                 </div>
                 <span className="font-bold text-stone-900">4.9</span>
-                <span className="text-stone-500 text-[11px]">(128 reviews)</span>
-              </div>
+                <span className="text-stone-500 text-[11px] underline">(128 reviews)</span>
+              </a>
             </div>
 
             {/* 2. Main Commercial Keyword H1 Title */}
@@ -243,7 +274,7 @@ export function HeroSection() {
                 <div className="grid grid-cols-2 gap-2">
                   <button
                     type="button"
-                    onClick={() => setSelectedSize("Medium")}
+                    onClick={() => handleSizeChange("Medium")}
                     className={`p-2.5 rounded-xl border-2 text-left transition-all ${
                       selectedSize === "Medium"
                         ? "border-stone-900 bg-stone-900 text-stone-50 shadow-xs"
@@ -261,7 +292,7 @@ export function HeroSection() {
 
                   <button
                     type="button"
-                    onClick={() => setSelectedSize("Large")}
+                    onClick={() => handleSizeChange("Large")}
                     className={`p-2.5 rounded-xl border-2 text-left transition-all ${
                       selectedSize === "Large"
                         ? "border-stone-900 bg-stone-900 text-stone-50 shadow-xs"
@@ -285,7 +316,7 @@ export function HeroSection() {
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.97 }}
-                onClick={() => addToCart()}
+                onClick={handleAddToCart}
                 className="w-full bg-stone-900 hover:bg-stone-800 text-stone-50 font-bold py-3.5 px-5 rounded-xl shadow-lg transition-all flex items-center justify-between group border border-stone-800"
                 id="hero-add-to-cart-btn"
               >
@@ -303,18 +334,30 @@ export function HeroSection() {
 
               {/* 7. Three Micro Trust Badges Line */}
               <div className="grid grid-cols-3 gap-1.5 text-center text-xs font-semibold text-stone-800 bg-amber-50/90 border border-amber-200/90 py-2 px-2.5 rounded-xl shadow-2xs">
-                <div className="flex items-center justify-center gap-1">
+                <button
+                  type="button"
+                  onClick={() => trackClickTrustBadge("30-Day Trial")}
+                  className="flex items-center justify-center gap-1 hover:opacity-80 transition-opacity"
+                >
                   <ShieldCheck className="w-3.5 h-3.5 text-amber-700 shrink-0" />
                   <span>30-Day Trial</span>
-                </div>
-                <div className="flex items-center justify-center gap-1 border-x border-amber-200 px-1">
+                </button>
+                <button
+                  type="button"
+                  onClick={() => trackClickTrustBadge("Free Shipping")}
+                  className="flex items-center justify-center gap-1 border-x border-amber-200 px-1 hover:opacity-80 transition-opacity"
+                >
                   <Layers className="w-3.5 h-3.5 text-amber-700 shrink-0" />
                   <span>Free Shipping</span>
-                </div>
-                <div className="flex items-center justify-center gap-1">
+                </button>
+                <button
+                  type="button"
+                  onClick={() => trackClickTrustBadge("Anti-Pilling")}
+                  className="flex items-center justify-center gap-1 hover:opacity-80 transition-opacity"
+                >
                   <Sparkles className="w-3.5 h-3.5 text-amber-700 shrink-0" />
                   <span>Anti-Pilling</span>
-                </div>
+                </button>
               </div>
             </div>
           </div>
