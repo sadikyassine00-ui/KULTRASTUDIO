@@ -1,0 +1,13 @@
+# LUXURY D2C E-COMMERCE DESIGN SYSTEM & UX RULES
+
+## VISUAL AESTHETICS & PALETTE
+- Base Palette: Warm Neutrals (`stone-50` to `stone-900` or `zinc`). NEVER use harsh saturated blues or pure `#000000` pitch black.
+- Accent: Deep Muted Luxury (e.g., Charcoal `#1A1A1A`, Muted Warm Sand, or Subtle Gold `#D4AF37`).
+- Typography: Pair a clean geometric sans-serif (e.g., Inter/Geist) for UI with a refined editorial serif (e.g., Playfair Display or Newsreader) for high-impact headlines.
+- Cards & Containers: Glassmorphism (`backdrop-blur-md`), subtle borders (`border-stone-200/60`), and soft elevated shadows (`shadow-sm` to `shadow-xl`).
+
+## HIGH-CONVERTING UX HEURISTICS (CONVERSION ENGINE)
+1. Mobile-First Sticky ATC: On mobile screens, display a sticky "Add to Cart" bar at the bottom with price and instant checkout once scrolled past hero.
+2. Frictionless Accordions: Product specs, material origin, and shipping info MUST use clean expandable accordions to prevent visual clutter.
+3. Social Proof Anchors: Place star ratings and "Verified Buyer" micro-badges directly adjacent to the main price tag, not just at the bottom of the page.
+4. Micro-Interactions: Use Framer Motion for subtle hover zooms on product imagery, smooth drawer slide-outs for the cart, and spring-physics button presses.
