@@ -9,7 +9,9 @@ import {
   Sparkles,
   VolumeX,
   Layers,
-  ArrowRight
+  ArrowRight,
+  ZoomIn,
+  X
 } from "lucide-react";
 import { useStore } from "@/context/StoreContext";
 import { motion, AnimatePresence } from "framer-motion";
@@ -34,7 +36,9 @@ export function HeroSection() {
   } = useStore();
 
   const [activeImageIndex, setActiveImageIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
+  const [isZoomed, setIsZoomed] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 50, y: 50 });
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
   const images = product.images;
 
@@ -56,6 +60,13 @@ export function HeroSection() {
   const handleImageClick = (idx: number, altText: string) => {
     setActiveImageIndex(idx);
     trackViewProductImage(idx, altText);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
+    const x = Math.max(0, Math.min(100, ((e.clientX - left) / width) * 100));
+    const y = Math.max(0, Math.min(100, ((e.clientY - top) / height) * 100));
+    setMousePosition({ x, y });
   };
 
   const handleAddToCart = () => {
@@ -91,20 +102,58 @@ export function HeroSection() {
         )}
       </AnimatePresence>
 
+      {/* Full-Screen Image Lightbox Modal */}
+      <AnimatePresence>
+        {isLightboxOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-stone-950/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-8"
+            onClick={() => setIsLightboxOpen(false)}
+          >
+            <button
+              onClick={() => setIsLightboxOpen(false)}
+              className="absolute top-6 right-6 text-stone-300 hover:text-white bg-stone-900/80 p-3 rounded-full border border-stone-700 z-50 transition-colors"
+              aria-label="Close Lightbox"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            <div
+              className="relative w-full max-w-5xl h-[80vh] rounded-3xl overflow-hidden border border-stone-800 shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <Image
+                src={images[activeImageIndex]?.url || images[0].url}
+                alt={images[activeImageIndex]?.altText || "KULTRA Studio Merino Wool Desk Mat high resolution detail"}
+                fill
+                sizes="100vw"
+                className="object-contain"
+              />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* 2-Column Side-by-Side Compact Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
         {/* Left Column: Product Showcase Gallery */}
         <div className="lg:col-span-7 flex flex-col gap-3">
-          {/* Main Showcase Image */}
+          {/* Main Showcase Image (Alibaba Precision Magnifier Zoom Panel) */}
           <div
-            className="relative w-full aspect-[4/3] max-h-[360px] lg:max-h-[390px] rounded-3xl overflow-hidden bg-stone-200/80 border border-stone-300/80 shadow-lg group cursor-pointer"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+            className="relative w-full aspect-[4/3] max-h-[360px] lg:max-h-[390px] rounded-3xl overflow-hidden bg-stone-200/80 border border-stone-300/80 shadow-lg group cursor-zoom-in select-none"
+            onMouseEnter={() => setIsZoomed(true)}
+            onMouseLeave={() => setIsZoomed(false)}
+            onMouseMove={handleMouseMove}
+            onClick={() => setIsLightboxOpen(true)}
           >
-            <motion.div
-              animate={{ scale: isHovered ? 1.05 : 1 }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
-              className="w-full h-full relative"
+            <div
+              className="w-full h-full relative transition-transform duration-100 ease-out"
+              style={{
+                transformOrigin: `${mousePosition.x}% ${mousePosition.y}%`,
+                transform: isZoomed ? "scale(2.2)" : "scale(1)"
+              }}
             >
               <Image
                 src={images[activeImageIndex]?.url || images[0].url}
@@ -115,7 +164,7 @@ export function HeroSection() {
                 sizes="(max-width: 1024px) 100vw, 60vw"
                 className="object-cover object-center"
               />
-            </motion.div>
+            </div>
 
             {/* Overlapping Specification Badges */}
             <div className="absolute top-3 left-3 flex flex-wrap gap-2 pointer-events-none z-10">
@@ -129,22 +178,24 @@ export function HeroSection() {
               </span>
             </div>
 
-            <div className="absolute bottom-3 right-3 glass-dark-card text-[11px] font-medium px-3 py-1 rounded-full tracking-wide text-amber-300 border border-stone-700/80">
-              Zero-Slide Micro-Grip Backing
+            {/* Hover Magnifier / Click Hint Badge */}
+            <div className="absolute bottom-3 right-3 glass-dark-card text-[11px] font-medium px-3.5 py-1 rounded-full tracking-wide text-amber-300 border border-stone-700/80 flex items-center gap-1.5">
+              <ZoomIn className="w-3.5 h-3.5 text-amber-400" />
+              <span>{isZoomed ? "Hover to Pan • Click to Enlarge" : "Zero-Slide Micro-Grip Backing"}</span>
             </div>
           </div>
 
-          {/* Gallery Thumbnails */}
-          <div className="grid grid-cols-4 gap-2.5">
+          {/* Gallery Thumbnails (Sitting Tight One Next to the Other) */}
+          <div className="flex items-center gap-2.5 sm:gap-3 overflow-x-auto py-1">
             {images.map((img, idx) => (
               <button
                 key={idx}
                 onClick={() => handleImageClick(idx, img.altText)}
                 aria-label={`View photo ${idx + 1} of 100% Merino Wool Desk Mat`}
-                className={`relative aspect-[4/3] max-h-16 rounded-xl overflow-hidden border-2 transition-all ${
+                className={`relative w-20 h-16 sm:w-24 sm:h-18 rounded-xl overflow-hidden border-2 shrink-0 transition-all ${
                   activeImageIndex === idx
-                    ? "border-stone-900 shadow-md ring-2 ring-stone-900/10 scale-[1.02]"
-                    : "border-stone-200 opacity-70 hover:opacity-100 hover:border-stone-400"
+                    ? "border-stone-900 shadow-md ring-2 ring-stone-900/10 scale-[1.03]"
+                    : "border-stone-200 opacity-75 hover:opacity-100 hover:border-stone-400"
                 }`}
               >
                 <Image
@@ -152,7 +203,7 @@ export function HeroSection() {
                   alt={`KULTRA Studio Desk Mat view ${idx + 1} - ${img.altText}`}
                   fill
                   loading="eager"
-                  sizes="(max-width: 768px) 25vw, 15vw"
+                  sizes="(max-width: 768px) 80px, 96px"
                   className="object-cover"
                 />
               </button>
