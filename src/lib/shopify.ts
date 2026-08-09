@@ -56,11 +56,11 @@ export interface Cart {
 
 // Default luxury product data with natural human descriptions and $80.00 retail pricing
 export const FALLBACK_PRODUCT: Product = {
-  id: "gid://shopify/Product/merino-cork-desk-mat-001",
-  title: "Merino Wool & Natural Cork Desk Mat",
-  handle: "merino-cork-desk-mat",
-  editorialSubtitle: "Australian Merino Wool Felt & Portuguese Cork Surface",
-  description: "Pressed 3.5mm Merino wool felt fused to natural Portuguese cork bark. Dampens mechanical keyboard acoustic echoes (-14dB), protects solid desktop wood, and provides a soft tracking surface.",
+  id: "gid://shopify/Product/merino-desk-mat-001",
+  title: "100% Merino Wool Desk Mat",
+  handle: "merino-wool-desk-mat",
+  editorialSubtitle: "3.0mm Solid Australian Merino Wool Felt",
+  description: "Full 3.0mm solid slab of pure Australian Merino wool felt with a low-profile zero-slide micro-grip dot backing. Dampens mechanical keyboard acoustic noise (-14dB), protects solid desktop surfaces, and provides a smooth tracking surface.",
   price: {
     amount: "80.00",
     currencyCode: "USD"
@@ -74,25 +74,25 @@ export const FALLBACK_PRODUCT: Product = {
   images: [
     {
       url: "/images/hero_desk_mat.png",
-      altText: "Charcoal Merino Wool and Natural Cork Desk Mat on an oak wood desk"
+      altText: "Charcoal 100% Merino Wool Desk Mat on an oak wood desk"
     },
     {
       url: "/images/wool_cork_texture.png",
-      altText: "Close-up of 3.5mm Merino wool felt fused to natural Portuguese cork"
+      altText: "Macro detail of 3.0mm solid Australian Merino wool felt weave"
     },
     {
       url: "/images/heather_grey_setup.png",
-      altText: "Heather Grey Merino Wool Desk Mat with laptop and workspace setup"
+      altText: "Heather Grey 100% Merino Wool Desk Mat with workspace setup"
     },
     {
       url: "/images/cork_base_detail.png",
-      altText: "Natural Portuguese cork bark underside non-slip texture"
+      altText: "Low-profile zero-slide micro-grip dot backing texture"
     }
   ],
   specifications: [
     { label: "Surface Fiber", value: "100% Virgin Australian Merino Wool (300g/m²)" },
-    { label: "Base Layer", value: "Sustainably Harvested Portuguese Natural Cork" },
-    { label: "Total Thickness", value: "3.5mm Cushioning Profile" },
+    { label: "Base Layer", value: "Low-Profile Zero-Slide Micro-Grip Matrix" },
+    { label: "Total Thickness", value: "3.0mm Solid Wool Felt Profile" },
     { label: "Acoustic Rating", value: "-14dB Key-Switch Sound Dampening" },
     { label: "Origin", value: "Hand-finished in Portugal & Germany" }
   ],
@@ -184,7 +184,7 @@ export async function shopifyFetch<T>({
 }
 
 // Fetch single product or fallback
-export async function getProduct(handle: string = "merino-cork-desk-mat"): Promise<Product> {
+export async function getProduct(handle: string = "merino-wool-desk-mat"): Promise<Product> {
   const query = `
     query getProduct($handle: String!) {
       product(handle: $handle) {

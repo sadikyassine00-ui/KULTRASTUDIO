@@ -24,7 +24,7 @@ export function Navbar() {
         <span className="hidden lg:inline text-stone-600">•</span>
         <span className="hidden lg:flex items-center gap-1.5">
           <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-          <span>Natural Merino Wool & Portuguese Cork</span>
+          <span>Natural Merino Wool & Zero-Slide Micro-Grip Backing</span>
         </span>
       </div>
 

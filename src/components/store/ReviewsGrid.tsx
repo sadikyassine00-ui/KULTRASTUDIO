@@ -26,7 +26,7 @@ const REVIEWS: Review[] = [
     rating: 5,
     date: "3 days ago",
     title: "Dampens mechanical keyboard desk rattle.",
-    content: "I use an aluminum Keychron Q1 with lubricant key switches. Before this mat, typing echoed through my wooden desk. The Merino wool dampens key sound noticeably, and the Portuguese cork backing stays firmly in place.",
+    content: "I use an aluminum Keychron Q1 with lubricant key switches. Before this mat, typing echoed through my wooden desk. The 3.0mm Merino wool dampens key sound noticeably, and the zero-slide micro-grip dot backing stays firmly in place.",
     variant: "Charcoal / Large",
     image: "/images/hero_desk_mat.png",
     verified: true
@@ -50,7 +50,7 @@ const REVIEWS: Review[] = [
     rating: 5,
     date: "2 weeks ago",
     title: "Durable wool that doesn't pill.",
-    content: "Cheaper felt pads pill within two weeks. This 300g/m² virgin wool has held up cleanly after 3 months of daily work. The natural cork backing grips solid wood without slipping.",
+    content: "Cheaper felt pads pill within two weeks. This 300g/m² virgin wool has held up cleanly after 3 months of daily work. The anti-slip micro-grip dot backing grips solid wood without slipping.",
     variant: "Charcoal / Medium",
     image: "/images/wool_cork_texture.png",
     verified: true

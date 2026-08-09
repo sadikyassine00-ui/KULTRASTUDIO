@@ -26,13 +26,13 @@ const ANATOMY_LAYERS: LayerDetail[] = [
     material: "300g/m² Non-Mulesed Merino Wool Felt",
     badge: "Soft Wool Top Surface",
     image: "/images/wool_cork_texture.png",
-    altText: "KULTRA Studio 3.5mm Merino Wool and Natural Cork Layer Texture",
+    altText: "KULTRA Studio 3.0mm Solid Australian Merino Wool Felt Surface Texture",
     specs: [
       { label: "Fiber Density", value: "300g/m² Dense Weave" },
       { label: "Acoustic Dampening", value: "-14dB Key-Switch Dampening" },
-      { label: "Treatment", value: "Anti-Pilling & Water Repellent" }
+      { label: "Treatment", value: "Anti-Pilling & Edge Sealed" }
     ],
-    description: "Sourced from certified Australian Merino wool farms. The surface wool regulates wrist temperature, dampens keyboard echo, and feels exceptionally comfortable during long working hours.",
+    description: "Sourced from certified organic Australian Merino wool farms. The surface wool regulates wrist temperature, dampens keyboard echo, and feels exceptionally comfortable during long working hours.",
     benefits: [
       "Naturally anti-static and dust resistant",
       "Protects laptop aluminum bodies from desk scratches",
@@ -42,17 +42,17 @@ const ANATOMY_LAYERS: LayerDetail[] = [
   {
     id: "layer-2",
     layerNumber: "Layer 2",
-    name: "High-Density Compression Core",
-    material: "3.5mm Shock-Absorbing Cushion Matrix",
-    badge: "Ergonomic Cushion Core",
+    name: "3.0mm Solid Density Wool Core",
+    material: "3.0mm Solid Compressed Wool Slab",
+    badge: "3.0mm Pure Wool Slab",
     image: "/images/hero_desk_mat.png",
-    altText: "KULTRA Studio Charcoal Merino Wool Desk Mat Cushioning Profile",
+    altText: "KULTRA Studio 3.0mm Solid Wool Slab Profile Detail",
     specs: [
-      { label: "Thickness", value: "3.5mm Profile" },
-      { label: "Compression Method", value: "Thermal Vapor Molded" },
+      { label: "Thickness", value: "3.0mm Solid Profile" },
+      { label: "Construction", value: "Pure Wool Felt Slab" },
       { label: "Wrist Ergonomics", value: "Pressure-Distributing Cushion" }
     ],
-    description: "Steam-compressed to provide subtle wrist cushioning without curling at the edges or shifting under heavy typing load.",
+    description: "Full 3.0mm solid slab of pure Merino wool felt (not a thin laminate). Steam-compressed to provide subtle wrist cushioning without curling at the edges or shifting under heavy typing load.",
     benefits: [
       "Dampens mechanical keyboard desk resonance",
       "Lies flat permanently across years of daily use",
@@ -62,21 +62,21 @@ const ANATOMY_LAYERS: LayerDetail[] = [
   {
     id: "layer-3",
     layerNumber: "Layer 3",
-    name: "Portuguese Natural Cork Base",
-    material: "Natural Quercus Suber Tree Bark",
-    badge: "Rubber-Free Cork Grip",
+    name: "Low-Profile Zero-Slide Micro-Grip Backing",
+    material: "Precision Anti-Slip Micro-Grip Dot Matrix",
+    badge: "Anti-Slip Dot Matrix Base",
     image: "/images/cork_base_detail.png",
-    altText: "KULTRA Studio Natural Portuguese Cork Bark Underside Non-Slip Texture",
+    altText: "KULTRA Studio Low-Profile Zero-Slide Micro-Grip Dot Backing Texture",
     specs: [
-      { label: "Cork Sourcing", value: "Alentejo, Portugal" },
-      { label: "Grip Rating", value: "High-Friction Non-Slip Base" },
-      { label: "Harvest Method", value: "Sustainably Stripped Tree Bark" }
+      { label: "Backing Tech", value: "Micro-Grip Dot Matrix" },
+      { label: "Grip Rating", value: "High-Friction Zero-Slide Base" },
+      { label: "Profile", value: "Ultra Low-Profile Backing" }
     ],
-    description: "Sustainably harvested from living cork oak trees in Portugal. The natural cork underside locks firmly onto wood, glass, or steel desks without rubber or adhesives.",
+    description: "Precision-molded micro-grip dot matrix applied directly to the underside. Grips solid wood, glass, laminate, or standing desk surfaces without slipping or residue.",
     benefits: [
-      "Free from synthetic rubber, petroleum, and chemical odors",
-      "Impervious to desk spills and wood moisture",
-      "Naturally hypoallergenic and antimicrobial"
+      "Zero shifting under rapid optical mouse movement",
+      "Protects wooden desktop finishes from moisture and scratches",
+      "Subtle and non-intrusive low-profile design"
     ]
   }
 ];
@@ -96,7 +96,7 @@ export function BentoGrid() {
           Anatomy of a Desk Surface
         </h2>
         <p className="text-stone-600 text-sm sm:text-base mt-2.5 leading-relaxed">
-          Pressed 3.5mm Merino wool felt layered directly onto natural Portuguese cork. Select a layer below to see how each material performs.
+          Pure 3.0mm solid Australian Merino wool felt engineered with a zero-slide micro-grip dot backing. Select a layer below to explore how each element performs.
         </p>
       </div>
 

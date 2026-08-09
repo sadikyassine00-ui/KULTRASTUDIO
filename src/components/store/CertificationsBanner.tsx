@@ -21,11 +21,11 @@ export function CertificationsBanner() {
       tag: "RWS Wool"
     },
     {
-      title: "FSC® Certified Eco-Cork",
-      subtitle: "Sustainable Cork Bark",
-      description: "Harvested from natural Quercus suber cork oak trees in Portugal every 9 years without damaging living trees.",
+      title: "Zero-Slide Micro-Grip Backing",
+      subtitle: "Precision Anti-Slip Matrix",
+      description: "Precision anti-slip dot matrix applied to the underside. Grips solid wood, glass, and standing desks securely without residue.",
       icon: <ShieldCheck className="w-6 h-6 text-amber-400" />,
-      tag: "FSC Cork"
+      tag: "Micro-Grip"
     },
     {
       title: "Plastic-Free Packaging",
@@ -52,7 +52,7 @@ export function CertificationsBanner() {
             Certified Organic Materials
           </h2>
           <p className="text-base text-stone-300 mt-3 leading-relaxed">
-            Tested and certified for animal welfare, human health, and sustainable Portuguese cork forestry.
+            Tested and certified for animal welfare, human health, and precision workspace ergonomics.
           </p>
         </div>
 

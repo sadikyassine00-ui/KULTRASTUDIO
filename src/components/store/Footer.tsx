@@ -41,15 +41,15 @@ export function Footer() {
               <ShieldCheck className="w-5 h-5" />
             </div>
             <h4 className="font-serif font-bold text-stone-100 text-sm">Lifetime Warranty</h4>
-            <p className="text-xs text-stone-400 mt-1">Covers felt stitching & cork</p>
+            <p className="text-xs text-stone-400 mt-1">Covers wool felt & backing</p>
           </div>
 
           <div className="flex flex-col items-center">
             <div className="w-10 h-10 rounded-full bg-stone-800 text-amber-400 flex items-center justify-center mb-3">
               <Award className="w-5 h-5" />
             </div>
-            <h4 className="font-serif font-bold text-stone-100 text-sm">Biodegradable</h4>
-            <p className="text-xs text-stone-400 mt-1">Natural wool & cork tree bark</p>
+            <h4 className="font-serif font-bold text-stone-100 text-sm">100% Merino Wool</h4>
+            <p className="text-xs text-stone-400 mt-1">Full 3.0mm solid slab</p>
           </div>
         </div>
 
@@ -66,7 +66,7 @@ export function Footer() {
               </span>
             </div>
             <p className="text-xs text-stone-400 leading-relaxed max-w-sm">
-              Independent studio creating Australian Merino wool felt and Portuguese natural cork desk pads.
+              Independent studio creating Australian Merino wool felt desk pads with zero-slide micro-grip backing.
             </p>
           </div>
 

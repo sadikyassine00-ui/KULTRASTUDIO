@@ -22,7 +22,7 @@ export function DarkSetupGallery() {
               In Daily Use
             </h2>
             <p className="text-stone-400 text-sm sm:text-base mt-2 max-w-xl">
-              Photographs from software engineers, audio designers, and writers using KULTRA Studio Merino mats on their desks.
+              Photographs from software engineers, audio designers, and writers using KULTRA Studio 3.0mm Merino mats on their desks.
             </p>
           </div>
 
@@ -46,7 +46,7 @@ export function DarkSetupGallery() {
             <div className="relative w-full h-80 sm:h-96 overflow-hidden">
               <Image
                 src="/images/dark_studio_setup.png"
-                alt="KULTRA Studio Charcoal Merino Wool & Cork Desk Mat in dark studio setup with mechanical keyboard"
+                alt="KULTRA Studio Charcoal 100% Merino Wool Desk Mat with micro-grip backing"
                 fill
                 sizes="(max-width: 1024px) 100vw, 60vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -66,7 +66,7 @@ export function DarkSetupGallery() {
                 "Dampens mechanical keyboard key clack noticeably."
               </h3>
               <p className="text-xs sm:text-sm text-stone-400 mt-2 leading-relaxed">
-                "I work in a quiet home studio. The wool absorbs keypress resonance, while the natural Portuguese cork underside stays firmly locked to my wooden desk without sliding."
+                "I work in a quiet home studio. The wool absorbs keypress resonance, while the micro-grip backing stays firmly locked to my wooden desk without sliding."
               </p>
 
               <div className="mt-4 pt-4 border-t border-stone-800 flex items-center justify-between text-xs font-semibold text-stone-400">
@@ -86,7 +86,7 @@ export function DarkSetupGallery() {
               <div className="relative w-full h-52 rounded-2xl overflow-hidden mb-4 border border-stone-800">
                 <Image
                   src="/images/audio_keyboard_setup.png"
-                  alt="KULTRA Studio Heather Grey Merino Wool Desk Mat overhead view on solid walnut desk"
+                  alt="KULTRA Studio Heather Grey 100% Merino Wool Desk Mat overhead view on solid desk"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -101,13 +101,13 @@ export function DarkSetupGallery() {
                   Tactile Daily Comfort
                 </h3>
                 <p className="text-xs text-stone-400 mt-1 leading-relaxed">
-                  Dense wool fiber provides smooth optical mouse tracking while protecting solid wood desk surfaces from laptop scratches.
+                  Dense 3.0mm wool fiber provides smooth optical mouse tracking while protecting solid wood desk surfaces from scratches.
                 </p>
               </div>
 
               <div className="mt-4 pt-3 border-t border-stone-800 flex items-center justify-between text-xs font-semibold text-amber-400">
                 <span>RWS Merino Wool</span>
-                <span>3.5mm Cushion</span>
+                <span>3.0mm Solid Slab</span>
               </div>
             </motion.div>
 

@@ -61,7 +61,7 @@ export function HeroSection() {
   const handleAddToCart = () => {
     addToCart();
     trackAddToCart({
-      name: "100% Merino Wool & Cork Desk Mat",
+      name: "100% Merino Wool Desk Mat",
       price: parseFloat(activeVariant.price.amount),
       variant: `${selectedColor} / ${selectedSize}`
     });
@@ -95,7 +95,7 @@ export function HeroSection() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
         {/* Left Column: Product Showcase Gallery */}
         <div className="lg:col-span-7 flex flex-col gap-3">
-          {/* Main Showcase Image (LCP Preloaded Eager Image) */}
+          {/* Main Showcase Image */}
           <div
             className="relative w-full aspect-[4/3] max-h-[360px] lg:max-h-[390px] rounded-3xl overflow-hidden bg-stone-200/80 border border-stone-300/80 shadow-lg group cursor-pointer"
             onMouseEnter={() => setIsHovered(true)}
@@ -108,7 +108,7 @@ export function HeroSection() {
             >
               <Image
                 src={images[activeImageIndex]?.url || images[0].url}
-                alt={images[activeImageIndex]?.altText ? `KULTRA Studio ${images[activeImageIndex].altText}` : "KULTRA Studio 3.5mm Merino Wool & Cork Desk Mat"}
+                alt={images[activeImageIndex]?.altText ? `KULTRA Studio ${images[activeImageIndex].altText}` : "KULTRA Studio 100% Merino Wool Desk Mat"}
                 fill
                 priority
                 loading="eager"
@@ -121,7 +121,7 @@ export function HeroSection() {
             <div className="absolute top-3 left-3 flex flex-wrap gap-2 pointer-events-none z-10">
               <span className="glass-dark-card text-[11px] font-medium tracking-wide px-3 py-1 rounded-full shadow-md flex items-center gap-1.5 border border-stone-700/80">
                 <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-                <span>3.5mm Australian Merino Wool</span>
+                <span>3.0mm Solid Merino Wool</span>
               </span>
               <span className="glass-panel text-stone-900 text-[11px] font-medium tracking-wide px-3 py-1 rounded-full shadow-md flex items-center gap-1.5 border border-stone-200/90">
                 <VolumeX className="w-3.5 h-3.5 text-amber-700" />
@@ -130,7 +130,7 @@ export function HeroSection() {
             </div>
 
             <div className="absolute bottom-3 right-3 glass-dark-card text-[11px] font-medium px-3 py-1 rounded-full tracking-wide text-amber-300 border border-stone-700/80">
-              Natural Portuguese Cork Base
+              Zero-Slide Micro-Grip Backing
             </div>
           </div>
 
@@ -140,7 +140,7 @@ export function HeroSection() {
               <button
                 key={idx}
                 onClick={() => handleImageClick(idx, img.altText)}
-                aria-label={`View photo ${idx + 1} of Merino Wool Desk Mat`}
+                aria-label={`View photo ${idx + 1} of 100% Merino Wool Desk Mat`}
                 className={`relative aspect-[4/3] max-h-16 rounded-xl overflow-hidden border-2 transition-all ${
                   activeImageIndex === idx
                     ? "border-stone-900 shadow-md ring-2 ring-stone-900/10 scale-[1.02]"
@@ -166,7 +166,7 @@ export function HeroSection() {
             {/* 1. Category Pill + Social Rating Stars */}
             <div className="flex items-center justify-between gap-2">
               <span className="text-[10px] font-semibold uppercase tracking-widest text-amber-800 bg-amber-100/90 border border-amber-200 px-2.5 py-0.5 rounded-full">
-                Natural Desk Surface
+                Solid Merino Wool Surface
               </span>
               <a
                 href="#reviews"
@@ -183,9 +183,9 @@ export function HeroSection() {
               </a>
             </div>
 
-            {/* 2. Main Commercial Keyword H1 Title */}
+            {/* 2. Main Title */}
             <h1 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-stone-900 leading-tight">
-              Merino Wool & Natural Cork Desk Mat
+              100% Merino Wool Desk Mat
             </h1>
 
             {/* 3. Price + In-Stock Status Badge */}
@@ -205,7 +205,7 @@ export function HeroSection() {
 
             {/* 4. 1-Sentence Value Proposition */}
             <p className="text-xs text-stone-600 leading-relaxed font-normal">
-              Pressed 3.5mm Merino wool felt fused to non-slip Portuguese cork bark. Dampens mechanical key sound and protects desk wood.
+              Full 3.0mm solid slab of pure Australian Merino wool felt with a low-profile zero-slide micro-grip dot backing. Dampens key sound and protects desk wood.
             </p>
 
             {/* 5. Variant Selectors */}

@@ -32,23 +32,23 @@ export function ProductAccordion() {
         <div className="space-y-3 text-xs text-stone-600">
           <div className="grid grid-cols-2 gap-2 py-1.5 border-b border-stone-200">
             <span className="font-semibold text-stone-900">Medium Size:</span>
-            <span>31.5" × 11.8" × 0.14" (80 × 30 cm × 3.5mm)</span>
+            <span>31.5" × 11.8" × 0.12" (80 × 30 cm × 3.0mm)</span>
           </div>
           <div className="grid grid-cols-2 gap-2 py-1.5 border-b border-stone-200">
             <span className="font-semibold text-stone-900">Large Size:</span>
-            <span>35.4" × 15.7" × 0.14" (90 × 40 cm × 3.5mm)</span>
+            <span>35.4" × 15.7" × 0.12" (90 × 40 cm × 3.0mm)</span>
           </div>
           <div className="grid grid-cols-2 gap-2 py-1.5 border-b border-stone-200">
             <span className="font-semibold text-stone-900">Total Weight:</span>
-            <span>Medium: 340g | Large: 480g</span>
+            <span>Medium: 320g | Large: 460g</span>
           </div>
           <div className="grid grid-cols-2 gap-2 py-1.5 border-b border-stone-200">
-            <span className="font-semibold text-stone-900">Wool Felt Density:</span>
-            <span>300g/m² High Compression Wool</span>
+            <span className="font-semibold text-stone-900">Wool Density:</span>
+            <span>300g/m² Solid Merino Wool Felt</span>
           </div>
           <div className="grid grid-cols-2 gap-2 py-1.5">
-            <span className="font-semibold text-stone-900">Compatibility:</span>
-            <span>Optical & Laser mice, Mechanical Keyboards, Glass & Wood desks</span>
+            <span className="font-semibold text-stone-900">Backing Tech:</span>
+            <span>Zero-Slide Micro-Grip Dot Matrix</span>
           </div>
         </div>
       )
@@ -59,7 +59,7 @@ export function ProductAccordion() {
       icon: <Globe className="w-4 h-4 text-amber-700" />,
       content: (
         <p className="text-xs text-stone-600 leading-relaxed">
-          We source Grade-A Merino Wool from non-mulesed Australian sheep farms certified under the Responsible Wool Standard (RWS). The cork backing is harvested every 9 years from natural cork oak trees in Alentejo, Portugal. Thermal vapor pressure fuses the layers without chemical adhesives.
+          We source Grade-A Merino Wool from non-mulesed Australian sheep farms certified under the Responsible Wool Standard (RWS). The 3.0mm solid wool felt slab is precision heat-set with an anti-slip micro-grip dot matrix backing for zero desktop sliding.
         </p>
       )
     },
@@ -71,7 +71,7 @@ export function ProductAccordion() {
         <div className="space-y-2 text-xs text-stone-600 leading-relaxed">
           <p>• <strong>Free Shipping:</strong> Automatically applied to orders over $70.00 USD (2–4 business days delivery).</p>
           <p>• <strong>30-Day Trial:</strong> Work with the mat on your desk for 30 days. If it doesn't fit your routine, return it for a full refund.</p>
-          <p>• <strong>Lifetime Guarantee:</strong> Covers stitching delamination or cork cracking for life.</p>
+          <p>• <strong>Lifetime Guarantee:</strong> Covers edge fraying or micro-grip dot backing delamination for life.</p>
         </div>
       )
     },

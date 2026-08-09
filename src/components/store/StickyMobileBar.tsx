@@ -35,7 +35,7 @@ export function StickyMobileBar() {
   const handleMobileAddToCart = () => {
     addToCart();
     trackAddToCart({
-      name: "100% Merino Wool & Cork Desk Mat",
+      name: "100% Merino Wool Desk Mat",
       price: parseFloat(activeVariant.price.amount),
       variant: `${activeVariant.colorName} / ${activeVariant.size}`
     });

@@ -128,7 +128,7 @@ export function CartDrawer() {
                         <div>
                           <div className="flex items-start justify-between">
                             <h4 className="font-serif font-bold text-sm text-stone-900 leading-tight">
-                              Merino Wool & Cork Mat
+                              100% Merino Wool Desk Mat
                             </h4>
                             <button
                               onClick={() => removeFromCart(line.variant.id)}
