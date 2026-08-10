@@ -6,9 +6,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     {
-      url: baseUrl,
+      url: `${baseUrl}/`,
       lastModified: currentDate,
-      changeFrequency: "weekly",
+      changeFrequency: "daily",
       priority: 1.0,
       images: [
         `${baseUrl}/images/products/kultra-australian-merino-wool-desk-mat-ash-gray.webp`,
@@ -20,16 +20,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ]
     },
     {
-      url: `${baseUrl}/return-policy`,
+      url: `${baseUrl}/return-policy/`,
       lastModified: currentDate,
       changeFrequency: "monthly",
-      priority: 0.8
+      priority: 0.3
     },
     {
-      url: `${baseUrl}/shipping`,
+      url: `${baseUrl}/shipping/`,
       lastModified: currentDate,
       changeFrequency: "monthly",
-      priority: 0.8
+      priority: 0.3
     }
   ];
 }
