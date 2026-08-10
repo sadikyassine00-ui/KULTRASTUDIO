@@ -88,9 +88,9 @@ export function StructuredData() {
         },
         "author": {
           "@type": "Person",
-          "name": "Marcus Vance"
+          "name": "Chris Taylor"
         },
-        "reviewBody": "Dampens mechanical keyboard key clack noticeably. The 3.0mm solid Merino wool is soft and the micro-grip backing stays firmly in place."
+        "reviewBody": "Took about two hours to sit completely flat after unboxing, but it's great now. Dampens the hollow thock from my Keychron keyboard so my desk doesn't echo during late-night coding sessions."
       }
     ]
   };

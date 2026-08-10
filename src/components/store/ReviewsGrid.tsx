@@ -19,8 +19,8 @@ interface Review {
 const REVIEWS: Review[] = [
   {
     id: "rev-1",
-    name: "Marcus V.",
-    role: "Software Engineer",
+    name: "Chris Taylor",
+    role: "Full Stack Developer",
     rating: 5,
     date: "4 days ago",
     title: "Cut down mechanical keyboard desk hollow sound.",
@@ -30,8 +30,8 @@ const REVIEWS: Review[] = [
   },
   {
     id: "rev-2",
-    name: "Elena R.",
-    role: "Product Designer",
+    name: "Hannah Bennett",
+    role: "UI/UX Designer",
     rating: 5,
     date: "1 week ago",
     title: "Way nicer on the wrists than cold standing desk tops.",
@@ -41,8 +41,8 @@ const REVIEWS: Review[] = [
   },
   {
     id: "rev-3",
-    name: "David K.",
-    role: "Backend Dev",
+    name: "Tom Lawson",
+    role: "Backend Engineer",
     rating: 5,
     date: "2 weeks ago",
     title: "Doesn't slide around at all.",

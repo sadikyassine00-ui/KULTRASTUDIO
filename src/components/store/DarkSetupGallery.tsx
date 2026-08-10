@@ -46,13 +46,13 @@ export function DarkSetupGallery() {
             <div className="relative w-full h-80 sm:h-96 overflow-hidden">
               <Image
                 src="/images/dark_studio_setup.png"
-                alt="KULTRA Studio Charcoal 100% Merino Wool Desk Mat with micro-grip backing"
+                alt="KULTRA Studio Dark Charcoal 100% Merino Wool Desk Mat with micro-grip backing"
                 fill
                 sizes="(max-width: 1024px) 100vw, 60vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute top-4 left-4 glass-dark-card text-xs font-semibold text-amber-300 px-3 py-1 rounded-full border border-stone-800">
-                Charcoal Merino Wool
+                Dark Charcoal Merino Wool
               </div>
             </div>
 
@@ -63,15 +63,15 @@ export function DarkSetupGallery() {
                 ))}
               </div>
               <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">
-                "Dampens mechanical keyboard key clack noticeably."
+                "Cut down mechanical keyboard desk hollow sound."
               </h3>
               <p className="text-xs sm:text-sm text-stone-400 mt-2 leading-relaxed">
-                "I work in a quiet home studio. The wool absorbs keypress resonance, while the micro-grip backing stays firmly locked to my wooden desk without sliding."
+                "Took about two hours to sit completely flat after unboxing, but it's great now. Dampens the hollow thock from my Keychron keyboard so my desk doesn't echo during late-night coding sessions."
               </p>
 
               <div className="mt-4 pt-4 border-t border-stone-800 flex items-center justify-between text-xs font-semibold text-stone-400">
-                <span>Marcus Vance</span>
-                <span className="text-amber-400">Software Architect, Seattle</span>
+                <span>Chris Taylor</span>
+                <span className="text-amber-400">Full Stack Developer, Seattle</span>
               </div>
             </div>
           </motion.div>
@@ -86,13 +86,13 @@ export function DarkSetupGallery() {
               <div className="relative w-full h-52 rounded-2xl overflow-hidden mb-4 border border-stone-800">
                 <Image
                   src="/images/audio_keyboard_setup.png"
-                  alt="KULTRA Studio Heather Grey 100% Merino Wool Desk Mat overhead view on solid desk"
+                  alt="KULTRA Studio Light Ash Grey 100% Merino Wool Desk Mat overhead view on solid desk"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute top-3 left-3 glass-dark-card text-xs font-semibold text-amber-300 px-3 py-1 rounded-full border border-stone-800">
-                  Heather Grey Finish
+                  Light Ash Grey Finish
                 </div>
               </div>
 
