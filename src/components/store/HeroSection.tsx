@@ -140,7 +140,7 @@ export function HeroSection() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
         {/* Left Column: Product Showcase Gallery (6 WebP Images) */}
         <div className="lg:col-span-7 flex flex-col gap-3">
-          {/* Main Showcase Image (Alibaba Precision Magnifier Zoom Panel - 1:1 Aspect Ratio) */}
+          {/* Main Showcase Image (Alibaba Precision Magnifier Zoom Panel - LCP Optimized) */}
           <div
             className="relative w-full aspect-square max-h-[420px] rounded-3xl overflow-hidden bg-stone-200/80 border border-stone-300/80 shadow-lg group cursor-zoom-in select-none"
             onMouseEnter={() => setIsZoomed(true)}
@@ -160,9 +160,10 @@ export function HeroSection() {
                 alt={currentImage.altText}
                 fill
                 priority={activeImageIndex === 0}
+                fetchPriority={activeImageIndex === 0 ? "high" : "auto"}
                 loading={activeImageIndex === 0 ? "eager" : "lazy"}
-                quality={90}
-                sizes="(max-width: 1024px) 100vw, 60vw"
+                quality={85}
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover object-center"
               />
             </div>
@@ -204,7 +205,7 @@ export function HeroSection() {
                   alt={img.altText}
                   fill
                   loading="lazy"
-                  quality={80}
+                  quality={75}
                   sizes="80px"
                   className="object-cover"
                 />

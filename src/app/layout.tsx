@@ -28,12 +28,12 @@ const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID || "xzf7lo2y2o";
 const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://usekultra.com";
+const SITE_URL = "https://usekultra.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   alternates: {
-    canonical: SITE_URL
+    canonical: "/"
   },
   title: {
     default: "100% Australian Merino Wool Desk Mat & Desk Blotter | KULTRA Studio",
@@ -106,6 +106,14 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.clarity.ms" />
         <link rel="dns-prefetch" href="https://www.clarity.ms" />
+
+        {/* Preload Hero LCP Image */}
+        <link
+          rel="preload"
+          as="image"
+          href="/images/products/kultra-australian-merino-wool-desk-mat-ash-gray.webp"
+          type="image/webp"
+        />
 
         {/* Microsoft Clarity Heatmaps Script */}
         <Script

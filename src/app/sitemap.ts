@@ -1,12 +1,12 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.usekultra.com";
+  const baseUrl = "https://usekultra.com";
   const currentDate = new Date();
 
   return [
     {
-      url: `${baseUrl}/`,
+      url: baseUrl,
       lastModified: currentDate,
       changeFrequency: "daily",
       priority: 1.0,
@@ -20,13 +20,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ]
     },
     {
-      url: `${baseUrl}/return-policy/`,
+      url: `${baseUrl}/return-policy`,
       lastModified: currentDate,
       changeFrequency: "monthly",
       priority: 0.3
     },
     {
-      url: `${baseUrl}/shipping/`,
+      url: `${baseUrl}/shipping`,
       lastModified: currentDate,
       changeFrequency: "monthly",
       priority: 0.3

@@ -20,6 +20,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: ["/", "/llms.txt"]
       }
     ],
-    sitemap: "https://www.usekultra.com/sitemap.xml"
+    sitemap: "https://usekultra.com/sitemap.xml"
   };
 }
