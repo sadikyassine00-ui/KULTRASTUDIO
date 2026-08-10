@@ -3,7 +3,7 @@ import React from "react";
 export function StructuredData() {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://usekultra.com";
 
-  // 1. Product & Offer Schema
+  // 1. Product & Offer Schema (Google Rich Results Audit Compliant)
   const productSchema = {
     "@context": "https://schema.org/",
     "@type": "Product",
@@ -27,6 +27,7 @@ export function StructuredData() {
       "url": baseUrl,
       "priceCurrency": "USD",
       "price": "80.00",
+      "validFrom": "2025-01-01",
       "priceValidUntil": "2027-12-31",
       "itemCondition": "https://schema.org/NewCondition",
       "availability": "https://schema.org/InStock",
@@ -34,12 +35,24 @@ export function StructuredData() {
         "@type": "Organization",
         "name": "KULTRA Studio"
       },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "US",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 30,
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/FreeReturn"
+      },
       "shippingDetails": {
         "@type": "OfferShippingDetails",
         "shippingRate": {
           "@type": "MonetaryAmount",
           "value": "0.00",
           "currency": "USD"
+        },
+        "shippingDestination": {
+          "@type": "DefinedRegion",
+          "addressCountry": "US"
         },
         "deliveryTime": {
           "@type": "ShippingDeliveryTime",
