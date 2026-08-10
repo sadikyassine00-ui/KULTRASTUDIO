@@ -3,11 +3,11 @@ import React from "react";
 export function StructuredData() {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://usekultra.com";
 
-  // 1. Product & Offer Schema (6 WebP Product Images Array)
+  // 1. Product & Offer Schema
   const productSchema = {
     "@context": "https://schema.org/",
     "@type": "Product",
-    "name": "100% Merino Wool Desk Mat",
+    "name": "100% Australian Merino Wool Desk Mat",
     "image": [
       `${baseUrl}/images/products/kultra-australian-merino-wool-desk-mat-ash-gray.webp`,
       `${baseUrl}/images/products/kultra-3mm-solid-wool-felt-texture-close-up.webp`,
@@ -16,7 +16,7 @@ export function StructuredData() {
       `${baseUrl}/images/products/kultra-merino-desk-mat-features-acoustic-dampening.webp`,
       `${baseUrl}/images/products/kultra-desk-mat-dark-charcoal-light-ash-grey.webp`
     ],
-    "description": "Full 3.0mm solid Australian Merino wool felt desk mat with zero-slide micro-grip dot backing. Absorbs mechanical keyboard acoustic noise (-14dB) and protects solid desk surfaces.",
+    "description": "Full 3.0mm solid Australian Merino wool felt desk mat with zero-slide micro-grip dot backing.",
     "sku": "KULTRA-MAT-MERINO-01",
     "mpn": "KULTRA-MAT-01",
     "brand": {
@@ -111,49 +111,33 @@ export function StructuredData() {
     ]
   };
 
-  // 3. FAQPage Schema
+  // 3. FAQ Schema (Grants Google Accordion Rich Snippets)
   const faqSchema = {
-    "@context": "https://schema.org/",
+    "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What are the dimensions and weights of the Merino Wool Desk Mat?",
+        "name": "Does the KULTRA wool desk mat slide on smooth wooden or glass desks?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The Medium size measures 80 × 30 cm × 3.0mm (31.5\" × 11.8\") weighing 320g. The Large size measures 90 × 40 cm × 3.0mm (35.4\" × 15.7\") weighing 460g."
+          "text": "No. Unlike cheap felt pads that slide, the KULTRA Merino Wool Desk Mat features an engineered micro-grip silicone dot backing that anchors firmly to oak, walnut, glass, and laminate surfaces without residue."
         }
       },
       {
         "@type": "Question",
-        "name": "How does the anti-slip micro-grip dot backing work?",
+        "name": "How thick is the Merino wool desk blotter?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The underside features a precision micro-grip dot matrix heat-set onto the 3.0mm solid wool slab. It locks firmly to solid wood, glass, or standing desks without rubber, petroleum chemical odors, or sticky adhesives."
+          "text": "The KULTRA desk mat is crafted from solid 3.0mm thick 100% Australian Merino wool felt, providing optimal wrist cushioning and absorbing mechanical keyboard acoustic vibrations by up to -14dB."
         }
       },
       {
         "@type": "Question",
-        "name": "Does the 100% Merino wool felt pill over time?",
+        "name": "How do you clean and maintain a Merino wool felt desk pad?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Our 300g/m² Grade-A virgin Australian Merino wool uses dense long-staple fibers treated for anti-pilling and anti-static performance, resisting fraying and fiber clumping."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does the desk mat reduce mechanical keyboard noise?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, the 3.0mm solid high-density wool slab dampens mechanical keyboard desk acoustic resonance by up to -14dB."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the 30-Day Trial and Shipping policy?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We offer complimentary express shipping on orders over $70.00 USD (8–12 business days delivery) along with a 30-day risk-free desk trial and a lifetime guarantee covering wool felt and micro-grip backing."
+          "text": "Merino wool contains natural lanolin, making it naturally water-repellent and stain-resistant. For routine maintenance, simply vacuum or lint-roll dust. For liquid spills, blot immediately with a damp cloth."
         }
       }
     ]

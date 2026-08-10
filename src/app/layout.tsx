@@ -34,17 +34,17 @@ export const metadata: Metadata = {
     canonical: SITE_URL
   },
   title: {
-    default: "100% Merino Wool Desk Mat | KULTRA Studio",
+    default: "100% Australian Merino Wool Desk Mat & Desk Blotter | KULTRA Studio",
     template: "%s | KULTRA Studio"
   },
-  description: "Full 3.0mm solid Australian Merino wool felt desk mat with zero-slide micro-grip dot backing. Absorbs mechanical keyboard acoustic noise (-14dB) and protects desk surfaces.",
+  description: "Elevate your workspace with the KULTRA 3.0mm solid Australian Merino wool felt desk mat. Features zero-slide micro-grip dot backing, -14dB keyboard noise dampening, and precision laser-cut edges. 30-Day Trial & Free US Shipping.",
   keywords: [
-    "merino wool desk mat",
-    "felt desk pad 3mm",
-    "anti slip wool desk pad",
-    "wool keyboard mat",
-    "scandinavian desk setup",
-    "KULTRA Studio"
+    "wool desk mat",
+    "desk blotter",
+    "merino wool desk pad",
+    "felt desk pad",
+    "acoustic keyboard mat",
+    "non slip desk mat"
   ],
   authors: [{ name: "KULTRA Studio" }],
   creator: "KULTRA Studio",
@@ -55,26 +55,26 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    type: "website",
-    locale: "en_US",
+    title: "KULTRA™ Merino Wool Desk Mat — Premium Workspace Blotter",
+    description: "Solid 3.0mm Australian Merino wool felt with micro-grip anti-slip backing.",
     url: SITE_URL,
     siteName: "KULTRA Studio",
-    title: "100% Merino Wool Desk Mat | KULTRA Studio",
-    description: "Full 3.0mm solid Australian Merino wool felt desk mat with zero-slide micro-grip dot backing.",
     images: [
       {
-        url: "/images/products/kultra-australian-merino-wool-desk-mat-ash-gray.webp",
+        url: `${SITE_URL}/images/products/kultra-australian-merino-wool-desk-mat-ash-gray.webp`,
         width: 1200,
         height: 1200,
-        alt: "KULTRA Studio 100% Merino Wool Desk Mat"
+        alt: "KULTRA Merino Wool Desk Mat"
       }
-    ]
+    ],
+    locale: "en_US",
+    type: "website"
   },
   twitter: {
     card: "summary_large_image",
-    title: "100% Merino Wool Desk Mat | KULTRA Studio",
-    description: "Full 3.0mm solid Australian Merino wool felt desk mat with zero-slide micro-grip dot backing.",
-    images: ["/images/products/kultra-australian-merino-wool-desk-mat-ash-gray.webp"]
+    title: "KULTRA™ Merino Wool Desk Mat — Premium Workspace Blotter",
+    description: "Solid 3.0mm Australian Merino wool felt with micro-grip anti-slip backing.",
+    images: [`${SITE_URL}/images/products/kultra-australian-merino-wool-desk-mat-ash-gray.webp`]
   },
   robots: {
     index: true,
