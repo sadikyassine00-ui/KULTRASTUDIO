@@ -43,8 +43,8 @@ export function HeroSection() {
 
   const handleColorChange = (color: string) => {
     setSelectedColor(color);
-    if (color === "Light Ash Grey" || color === "Heather Grey") {
-      setActiveImageIndex(2);
+    if (color === "Dark Charcoal" || color === "Charcoal") {
+      setActiveImageIndex(3);
     } else {
       setActiveImageIndex(0);
     }
@@ -74,6 +74,8 @@ export function HeroSection() {
       variant: `${selectedColor} / ${selectedSize}`
     });
   };
+
+  const currentImage = images[activeImageIndex] || images[0];
 
   return (
     <section id="hero" aria-label="Product Showcase" className="relative pt-2 pb-6 md:py-4 lg:py-6 px-4 sm:px-8 max-w-7xl mx-auto">
@@ -118,12 +120,12 @@ export function HeroSection() {
             </button>
 
             <div
-              className="relative w-full max-w-5xl h-[80vh] rounded-3xl overflow-hidden border border-stone-800 shadow-2xl"
+              className="relative w-full max-w-5xl aspect-square max-h-[80vh] rounded-3xl overflow-hidden border border-stone-800 shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
               <Image
-                src={images[activeImageIndex]?.url || images[0].url}
-                alt={images[activeImageIndex]?.altText || "KULTRA Studio Merino Wool Desk Mat high resolution detail"}
+                src={currentImage.url}
+                alt={currentImage.altText}
                 fill
                 quality={90}
                 sizes="100vw"
@@ -136,11 +138,11 @@ export function HeroSection() {
 
       {/* 2-Column Side-by-Side Compact Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
-        {/* Left Column: Product Showcase Gallery */}
+        {/* Left Column: Product Showcase Gallery (6 WebP Images) */}
         <div className="lg:col-span-7 flex flex-col gap-3">
-          {/* Main Showcase Image (Alibaba Precision Magnifier Zoom Panel) */}
+          {/* Main Showcase Image (Alibaba Precision Magnifier Zoom Panel - 1:1 Aspect Ratio) */}
           <div
-            className="relative w-full aspect-[4/3] max-h-[360px] lg:max-h-[390px] rounded-3xl overflow-hidden bg-stone-200/80 border border-stone-300/80 shadow-lg group cursor-zoom-in select-none"
+            className="relative w-full aspect-square max-h-[420px] rounded-3xl overflow-hidden bg-stone-200/80 border border-stone-300/80 shadow-lg group cursor-zoom-in select-none"
             onMouseEnter={() => setIsZoomed(true)}
             onMouseLeave={() => setIsZoomed(false)}
             onMouseMove={handleMouseMove}
@@ -154,11 +156,11 @@ export function HeroSection() {
               }}
             >
               <Image
-                src={images[activeImageIndex]?.url || images[0].url}
-                alt={images[activeImageIndex]?.altText ? `KULTRA Studio ${images[activeImageIndex].altText}` : "KULTRA Studio 100% Merino Wool Desk Mat"}
+                src={currentImage.url}
+                alt={currentImage.altText}
                 fill
-                priority
-                loading="eager"
+                priority={activeImageIndex === 0}
+                loading={activeImageIndex === 0 ? "eager" : "lazy"}
                 quality={90}
                 sizes="(max-width: 1024px) 100vw, 60vw"
                 className="object-cover object-center"
@@ -184,14 +186,14 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Gallery Thumbnails (Sitting Tight One Next to the Other) */}
-          <div className="flex items-center gap-2.5 sm:gap-3 overflow-x-auto py-1">
+          {/* Gallery Thumbnails (6 WebP Items Sitting Tight Side-by-Side) */}
+          <div className="flex items-center gap-2 overflow-x-auto py-1">
             {images.map((img, idx) => (
               <button
                 key={idx}
                 onClick={() => handleImageClick(idx, img.altText)}
                 aria-label={`View photo ${idx + 1} of 100% Merino Wool Desk Mat`}
-                className={`relative w-20 h-16 sm:w-24 sm:h-18 rounded-xl overflow-hidden border-2 shrink-0 transition-all ${
+                className={`relative w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden border-2 shrink-0 transition-all ${
                   activeImageIndex === idx
                     ? "border-stone-900 shadow-md ring-2 ring-stone-900/10 scale-[1.03]"
                     : "border-stone-200 opacity-75 hover:opacity-100 hover:border-stone-400"
@@ -199,11 +201,11 @@ export function HeroSection() {
               >
                 <Image
                   src={img.url}
-                  alt={`KULTRA Studio Desk Mat view ${idx + 1} - ${img.altText}`}
+                  alt={img.altText}
                   fill
-                  loading="eager"
-                  quality={85}
-                  sizes="(max-width: 768px) 80px, 96px"
+                  loading="lazy"
+                  quality={80}
+                  sizes="80px"
                   className="object-cover"
                 />
               </button>

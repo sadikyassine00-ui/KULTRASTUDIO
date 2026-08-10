@@ -73,20 +73,28 @@ export const FALLBACK_PRODUCT: Product = {
   reviewCount: 128,
   images: [
     {
-      url: "/images/hero_desk_mat.png",
-      altText: "Dark Charcoal 100% Merino Wool Desk Mat on an oak wood desk"
+      url: "/images/products/kultra-australian-merino-wool-desk-mat-ash-gray.webp",
+      altText: "100% Australian Merino Wool Desk Mat in Light Ash Grey on a modern wooden desk with mechanical keyboard"
     },
     {
-      url: "/images/wool_cork_texture.png",
-      altText: "Macro detail of 3.0mm solid Australian Merino wool felt weave"
+      url: "/images/products/kultra-3mm-solid-wool-felt-texture-close-up.webp",
+      altText: "Macro close-up of 3.0mm solid Australian Merino wool felt weave showing raw precision-cut edge"
     },
     {
-      url: "/images/heather_grey_setup.png",
-      altText: "Light Ash Grey 100% Merino Wool Desk Mat with workspace setup"
+      url: "/images/products/kultra-desk-mat-anti-slip-micro-grip-dot-backing.webp",
+      altText: "Underside corner of KULTRA Studio desk mat flipped showing anti-slip micro-grip dot backing on wood surface"
     },
     {
-      url: "/images/cork_base_detail.png",
-      altText: "Low-profile zero-slide micro-grip dot backing texture"
+      url: "/images/products/kultra-wool-desk-pad-dimensions-keyboard-mouse-setup.webp",
+      altText: "Overhead view of 900mm x 400mm wool desk pad showing scale with mechanical keyboard, mouse, and workspace setup"
+    },
+    {
+      url: "/images/products/kultra-merino-desk-mat-features-acoustic-dampening.webp",
+      altText: "Infographic highlighting KULTRA Studio desk mat key features including -14dB acoustic dampening and 3mm solid felt"
+    },
+    {
+      url: "/images/products/kultra-desk-mat-dark-charcoal-light-ash-grey.webp",
+      altText: "KULTRA Studio Australian Merino Wool Desk Mats in Dark Charcoal and Light Ash Grey side-by-side"
     }
   ],
   specifications: [
@@ -106,7 +114,7 @@ export const FALLBACK_PRODUCT: Product = {
       dimensions: "31.5\" × 11.8\" (80 × 30 cm)",
       price: { amount: "80.00", currencyCode: "USD" },
       availableForSale: true,
-      image: "/images/hero_desk_mat.png"
+      image: "/images/products/kultra-wool-desk-pad-dimensions-keyboard-mouse-setup.webp"
     },
     {
       id: "gid://shopify/ProductVariant/charcoal-large",
@@ -117,7 +125,7 @@ export const FALLBACK_PRODUCT: Product = {
       dimensions: "35.4\" × 15.7\" (90 × 40 cm)",
       price: { amount: "95.00", currencyCode: "USD" },
       availableForSale: true,
-      image: "/images/hero_desk_mat.png"
+      image: "/images/products/kultra-wool-desk-pad-dimensions-keyboard-mouse-setup.webp"
     },
     {
       id: "gid://shopify/ProductVariant/ash-medium",
@@ -128,7 +136,7 @@ export const FALLBACK_PRODUCT: Product = {
       dimensions: "31.5\" × 11.8\" (80 × 30 cm)",
       price: { amount: "80.00", currencyCode: "USD" },
       availableForSale: true,
-      image: "/images/heather_grey_setup.png"
+      image: "/images/products/kultra-australian-merino-wool-desk-mat-ash-gray.webp"
     },
     {
       id: "gid://shopify/ProductVariant/ash-large",
@@ -139,7 +147,7 @@ export const FALLBACK_PRODUCT: Product = {
       dimensions: "35.4\" × 15.7\" (90 × 40 cm)",
       price: { amount: "95.00", currencyCode: "USD" },
       availableForSale: true,
-      image: "/images/heather_grey_setup.png"
+      image: "/images/products/kultra-australian-merino-wool-desk-mat-ash-gray.webp"
     }
   ]
 };
@@ -215,7 +223,7 @@ export async function getProduct(handle: string = "merino-wool-desk-mat"): Promi
             }
           }
         }
-        images(first: 5) {
+        images(first: 6) {
           edges {
             node {
               url

@@ -3,15 +3,18 @@ import React from "react";
 export function StructuredData() {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://usekultra.com";
 
-  // 1. Product & Offer Schema (Google Rich Results Audit Compliant)
+  // 1. Product & Offer Schema (6 WebP Product Images Array)
   const productSchema = {
     "@context": "https://schema.org/",
     "@type": "Product",
     "name": "100% Merino Wool Desk Mat",
     "image": [
-      `${baseUrl}/images/hero_desk_mat.png`,
-      `${baseUrl}/images/wool_cork_texture.png`,
-      `${baseUrl}/images/heather_grey_setup.png`
+      `${baseUrl}/images/products/kultra-australian-merino-wool-desk-mat-ash-gray.webp`,
+      `${baseUrl}/images/products/kultra-3mm-solid-wool-felt-texture-close-up.webp`,
+      `${baseUrl}/images/products/kultra-desk-mat-anti-slip-micro-grip-dot-backing.webp`,
+      `${baseUrl}/images/products/kultra-wool-desk-pad-dimensions-keyboard-mouse-setup.webp`,
+      `${baseUrl}/images/products/kultra-merino-desk-mat-features-acoustic-dampening.webp`,
+      `${baseUrl}/images/products/kultra-desk-mat-dark-charcoal-light-ash-grey.webp`
     ],
     "description": "Full 3.0mm solid Australian Merino wool felt desk mat with zero-slide micro-grip dot backing. Absorbs mechanical keyboard acoustic noise (-14dB) and protects solid desk surfaces.",
     "sku": "KULTRA-MAT-MERINO-01",
