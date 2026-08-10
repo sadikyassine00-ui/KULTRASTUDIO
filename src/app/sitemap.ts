@@ -16,6 +16,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         `${baseUrl}/images/heather_grey_setup.png`,
         `${baseUrl}/images/cork_base_detail.png`
       ]
+    },
+    {
+      url: `${baseUrl}/return-policy`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.8
     }
   ];
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { ShieldCheck, Truck, RotateCcw, Award, Check } from "lucide-react";
 
 export function Footer() {
@@ -73,10 +74,11 @@ export function Footer() {
           <div className="md:col-span-3 space-y-3">
             <h4 className="font-serif font-bold text-stone-100 text-sm">Overview</h4>
             <ul className="space-y-2 text-xs text-stone-400">
-              <li><a href="#hero" className="hover:text-amber-400 transition-colors">Desk Mat</a></li>
-              <li><a href="#materials" className="hover:text-amber-400 transition-colors">Material Craft</a></li>
-              <li><a href="#specs" className="hover:text-amber-400 transition-colors">Dimensions</a></li>
-              <li><a href="#reviews" className="hover:text-amber-400 transition-colors">Customer Reviews</a></li>
+              <li><Link href="/" className="hover:text-amber-400 transition-colors">Desk Mat</Link></li>
+              <li><Link href="/#materials" className="hover:text-amber-400 transition-colors">Material Craft</Link></li>
+              <li><Link href="/#specs" className="hover:text-amber-400 transition-colors">Dimensions</Link></li>
+              <li><Link href="/#reviews" className="hover:text-amber-400 transition-colors">Customer Reviews</Link></li>
+              <li><Link href="/return-policy" className="text-amber-400 hover:underline transition-colors font-medium">Return Policy</Link></li>
             </ul>
           </div>
 
@@ -115,11 +117,11 @@ export function Footer() {
         <div className="pt-8 border-t border-stone-800 text-center text-[11px] text-stone-500 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p>© 2026 KULTRA Studio. All rights reserved.</p>
           <div className="flex items-center gap-4">
+            <Link href="/return-policy" className="hover:text-stone-300">Return Policy</Link>
+            <span>•</span>
             <a href="#" className="hover:text-stone-300">Privacy Policy</a>
             <span>•</span>
             <a href="#" className="hover:text-stone-300">Terms of Service</a>
-            <span>•</span>
-            <a href="#" className="hover:text-stone-300">Sourcing Report</a>
           </div>
         </div>
       </div>

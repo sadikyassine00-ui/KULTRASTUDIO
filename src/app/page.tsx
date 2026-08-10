@@ -1,5 +1,4 @@
 import React from "react";
-import { StoreProvider } from "@/context/StoreContext";
 import { Navbar } from "@/components/store/Navbar";
 import { HeroSection } from "@/components/store/HeroSection";
 import { BentoGrid } from "@/components/store/BentoGrid";
@@ -14,7 +13,7 @@ import { StructuredData } from "@/components/StructuredData";
 
 export default function StorePage() {
   return (
-    <StoreProvider>
+    <>
       {/* Triple JSON-LD Structured Data Schemas (Product, Organization, FAQPage) */}
       <StructuredData />
 
@@ -39,6 +38,6 @@ export default function StorePage() {
         <StickyMobileBar />
         <CartDrawer />
       </div>
-    </StoreProvider>
+    </>
   );
 }

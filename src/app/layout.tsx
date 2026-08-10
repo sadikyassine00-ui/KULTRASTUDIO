@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
+import { StoreProvider } from "@/context/StoreContext";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -167,7 +168,9 @@ export default function RootLayout({
         suppressHydrationWarning
         className="min-h-full flex flex-col bg-stone-50 text-stone-900 font-sans"
       >
-        {children}
+        <StoreProvider>
+          {children}
+        </StoreProvider>
       </body>
     </html>
   );
