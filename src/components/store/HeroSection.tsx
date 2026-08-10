@@ -125,6 +125,7 @@ export function HeroSection() {
                 src={images[activeImageIndex]?.url || images[0].url}
                 alt={images[activeImageIndex]?.altText || "KULTRA Studio Merino Wool Desk Mat high resolution detail"}
                 fill
+                quality={90}
                 sizes="100vw"
                 className="object-contain"
               />
@@ -158,6 +159,7 @@ export function HeroSection() {
                 fill
                 priority
                 loading="eager"
+                quality={90}
                 sizes="(max-width: 1024px) 100vw, 60vw"
                 className="object-cover object-center"
               />
@@ -200,6 +202,7 @@ export function HeroSection() {
                   alt={`KULTRA Studio Desk Mat view ${idx + 1} - ${img.altText}`}
                   fill
                   loading="eager"
+                  quality={85}
                   sizes="(max-width: 768px) 80px, 96px"
                   className="object-cover"
                 />
@@ -231,7 +234,7 @@ export function HeroSection() {
               </a>
             </div>
 
-            {/* 2. Main Title */}
+            {/* 2. Main Title (Sole H1 on Page) */}
             <h1 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-stone-900 leading-tight">
               100% Merino Wool Desk Mat
             </h1>

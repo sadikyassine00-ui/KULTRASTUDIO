@@ -25,18 +25,25 @@ const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID || "xzf7lo2y2o";
 const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://usekultra.com";
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://usekultra.com"),
-  title: "100% Merino Wool Desk Mat | KULTRA Studio",
-  description: "Full 3mm dense Australian Merino wool felt desk mat with zero-slide micro-grip backing. Absorbs mechanical keyboard noise (-14dB) and protects desk surfaces.",
+  metadataBase: new URL(SITE_URL),
+  alternates: {
+    canonical: SITE_URL
+  },
+  title: {
+    default: "100% Merino Wool Desk Mat | KULTRA Studio",
+    template: "%s | KULTRA Studio"
+  },
+  description: "Full 3.0mm solid Australian Merino wool felt desk mat with zero-slide micro-grip dot backing. Absorbs mechanical keyboard acoustic noise (-14dB) and protects desk surfaces.",
   keywords: [
-    "wool desk mat",
-    "felt desk pad",
-    "large merino desk mat",
-    "100% merino wool desk mat",
+    "merino wool desk mat",
     "felt desk pad 3mm",
     "anti slip wool desk pad",
-    "acoustic keyboard pad"
+    "wool keyboard mat",
+    "scandinavian desk setup",
+    "KULTRA Studio"
   ],
   authors: [{ name: "KULTRA Studio" }],
   creator: "KULTRA Studio",
@@ -47,10 +54,12 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: "100% Merino Wool Desk Mat | KULTRA Studio",
-    description: "Full 3mm dense Australian Merino wool felt desk mat with zero-slide micro-grip backing. Absorbs mechanical keyboard acoustic noise (-14dB).",
-    url: "https://usekultra.com",
+    type: "website",
+    locale: "en_US",
+    url: SITE_URL,
     siteName: "KULTRA Studio",
+    title: "100% Merino Wool Desk Mat | KULTRA Studio",
+    description: "Full 3.0mm solid Australian Merino wool felt desk mat with zero-slide micro-grip dot backing.",
     images: [
       {
         url: "/images/hero_desk_mat.png",
@@ -58,15 +67,13 @@ export const metadata: Metadata = {
         height: 630,
         alt: "KULTRA Studio 100% Merino Wool Desk Mat"
       }
-    ],
-    locale: "en_US",
-    type: "website",
+    ]
   },
   twitter: {
     card: "summary_large_image",
     title: "100% Merino Wool Desk Mat | KULTRA Studio",
-    description: "Full 3mm dense Australian Merino wool felt desk mat with zero-slide micro-grip backing ($80.00 USD).",
-    images: ["/images/hero_desk_mat.png"],
+    description: "Full 3.0mm solid Australian Merino wool felt desk mat with zero-slide micro-grip dot backing.",
+    images: ["/images/hero_desk_mat.png"]
   },
   robots: {
     index: true,
@@ -92,6 +99,11 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} h-full antialiased selection:bg-amber-200 selection:text-stone-900`}
     >
       <head>
+        {/* Preconnect & DNS-Prefetch Performance Hints */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.clarity.ms" />
+        <link rel="dns-prefetch" href="https://www.clarity.ms" />
+
         {/* Microsoft Clarity Heatmaps Script */}
         <Script
           id="microsoft-clarity"

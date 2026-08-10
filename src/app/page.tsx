@@ -10,13 +10,13 @@ import { ReviewsGrid } from "@/components/store/ReviewsGrid";
 import { Footer } from "@/components/store/Footer";
 import { StickyMobileBar } from "@/components/store/StickyMobileBar";
 import { CartDrawer } from "@/components/store/CartDrawer";
-import { ProductSchema } from "@/components/store/ProductSchema";
+import { StructuredData } from "@/components/StructuredData";
 
 export default function StorePage() {
   return (
     <StoreProvider>
-      {/* Schema.org Product JSON-LD */}
-      <ProductSchema />
+      {/* Triple JSON-LD Structured Data Schemas (Product, Organization, FAQPage) */}
+      <StructuredData />
 
       <div className="min-h-screen flex flex-col bg-[#FAFAF9] text-stone-900 selection:bg-amber-200">
         {/* Navigation Bar */}
