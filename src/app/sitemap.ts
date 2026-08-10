@@ -20,16 +20,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ]
     },
     {
+      url: `${baseUrl}/pages/shipping-policy`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.5
+    },
+    {
       url: `${baseUrl}/return-policy`,
       lastModified: currentDate,
       changeFrequency: "monthly",
-      priority: 0.3
+      priority: 0.5
     },
     {
-      url: `${baseUrl}/shipping`,
+      url: `${baseUrl}/pages/privacy-policy`,
       lastModified: currentDate,
       changeFrequency: "monthly",
-      priority: 0.3
+      priority: 0.5
+    },
+    {
+      url: `${baseUrl}/pages/terms-of-service`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.5
+    },
+    {
+      url: `${baseUrl}/pages/contact`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.5
     }
   ];
 }

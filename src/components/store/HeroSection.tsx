@@ -291,6 +291,11 @@ export function HeroSection() {
                 </div>
               </motion.button>
 
+              {/* Single Line Small-Caps Buy Button Micro-Copy */}
+              <p className="text-[10px] uppercase font-semibold text-stone-500 text-center tracking-wider py-1">
+                Complimentary US Shipping (8–13 Business Days) | 30-Day Risk-Free Trial
+              </p>
+
               {/* 7. Three Micro Trust Badges Line */}
               <div className="grid grid-cols-3 gap-1.5 text-center text-xs font-semibold text-stone-800 bg-amber-50/90 border border-amber-200/90 py-2 px-2.5 rounded-xl shadow-2xs">
                 <button

@@ -72,13 +72,13 @@ export function Footer() {
           </div>
 
           <div className="md:col-span-3 space-y-3">
-            <h4 className="font-serif font-bold text-stone-100 text-sm">Overview</h4>
+            <h4 className="font-serif font-bold text-stone-100 text-sm">Policies & Support</h4>
             <ul className="space-y-2 text-xs text-stone-400">
-              <li><Link href="/" className="hover:text-amber-400 transition-colors">Desk Mat</Link></li>
-              <li><Link href="/#materials" className="hover:text-amber-400 transition-colors">Material Craft</Link></li>
-              <li><Link href="/#specs" className="hover:text-amber-400 transition-colors">Dimensions</Link></li>
-              <li><Link href="/#reviews" className="hover:text-amber-400 transition-colors">Customer Reviews</Link></li>
-              <li><Link href="/return-policy" className="text-amber-400 hover:underline transition-colors font-medium">Return Policy</Link></li>
+              <li><Link href="/pages/shipping-policy" className="hover:text-amber-400 transition-colors">Shipping Policy</Link></li>
+              <li><Link href="/return-policy" className="hover:text-amber-400 transition-colors">Return Policy</Link></li>
+              <li><Link href="/pages/privacy-policy" className="hover:text-amber-400 transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/pages/terms-of-service" className="hover:text-amber-400 transition-colors">Terms of Service</Link></li>
+              <li><Link href="/pages/contact" className="hover:text-amber-400 transition-colors">Contact Support</Link></li>
             </ul>
           </div>
 
@@ -113,15 +113,24 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="pt-8 border-t border-stone-800 text-center text-[11px] text-stone-500 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p>© 2026 KULTRA Studio. All rights reserved.</p>
-          <div className="flex items-center gap-4">
-            <Link href="/return-policy" className="hover:text-stone-300">Return Policy</Link>
-            <span>•</span>
-            <a href="#" className="hover:text-stone-300">Privacy Policy</a>
-            <span>•</span>
-            <a href="#" className="hover:text-stone-300">Terms of Service</a>
+        {/* Legal Ownership Text & Copyright */}
+        <div className="pt-8 border-t border-stone-800 text-center text-[11px] text-stone-500 flex flex-col gap-3">
+          <p className="text-stone-400">
+            KULTRA Studio is owned and operated by HostKeys LLC, located at 30 N Gould St Ste R, Sheridan, WY 82801, USA.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+            <p>© 2026 KULTRA Studio. All rights reserved.</p>
+            <div className="flex items-center gap-4 flex-wrap justify-center">
+              <Link href="/pages/shipping-policy" className="hover:text-stone-300">Shipping Policy</Link>
+              <span>•</span>
+              <Link href="/return-policy" className="hover:text-stone-300">Return Policy</Link>
+              <span>•</span>
+              <Link href="/pages/privacy-policy" className="hover:text-stone-300">Privacy Policy</Link>
+              <span>•</span>
+              <Link href="/pages/terms-of-service" className="hover:text-stone-300">Terms of Service</Link>
+              <span>•</span>
+              <Link href="/pages/contact" className="hover:text-stone-300">Contact</Link>
+            </div>
           </div>
         </div>
       </div>
