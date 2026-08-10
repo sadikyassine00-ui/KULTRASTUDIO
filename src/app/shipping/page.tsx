@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, Truck, Clock, ShieldCheck, Globe } from "lucide-react";
+import { ArrowLeft, Truck, Clock, Globe } from "lucide-react";
 import { Navbar } from "@/components/store/Navbar";
 import { Footer } from "@/components/store/Footer";
 
 export const metadata: Metadata = {
   title: "Shipping & Delivery Information | KULTRA Studio",
-  description: "KULTRA Studio complimentary express US shipping and 8–12 business days delivery details.",
+  description: "KULTRA Studio complimentary express US shipping and 8-12 business days delivery details.",
   alternates: {
     canonical: "https://usekultra.com/shipping"
   }
@@ -56,7 +56,7 @@ export default function ShippingPage() {
               <Clock className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="font-serif font-bold text-base text-stone-900">8–12 Day Delivery</h3>
+              <h3 className="font-serif font-bold text-base text-stone-900">8-12 Day Delivery</h3>
               <p className="text-xs text-stone-600 mt-1 leading-normal">
                 Standard delivery timeline of 8 to 12 business days with full door-to-door tracking.
               </p>
@@ -87,8 +87,8 @@ export default function ShippingPage() {
           <section className="glass-card p-6 sm:p-8 rounded-3xl border border-stone-200/80 space-y-3">
             <h2 className="font-serif text-xl font-bold text-stone-900">2. Rates & Timelines</h2>
             <p>
-              • <strong>Domestic US (Orders $70+):</strong> FREE Express Shipping (8–12 Business Days).<br />
-              • <strong>Domestic US (Orders under $70):</strong> Flat Rate $5.00 USD (8–12 Business Days).
+              • <strong>Domestic US (Orders $70+):</strong> FREE Express Shipping (8-12 Business Days).<br />
+              • <strong>Domestic US (Orders under $70):</strong> Flat Rate $5.00 USD (8-12 Business Days).
             </p>
           </section>
         </div>

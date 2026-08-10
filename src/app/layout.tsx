@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: "KULTRA™ Merino Wool Desk Mat — Premium Workspace Blotter",
+    title: "KULTRA™ Merino Wool Desk Mat - Premium Workspace Blotter",
     description: "Solid 3.0mm Australian Merino wool felt with micro-grip anti-slip backing.",
     url: SITE_URL,
     siteName: "KULTRA Studio",
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "KULTRA™ Merino Wool Desk Mat — Premium Workspace Blotter",
+    title: "KULTRA™ Merino Wool Desk Mat - Premium Workspace Blotter",
     description: "Solid 3.0mm Australian Merino wool felt with micro-grip anti-slip backing.",
     images: [`${SITE_URL}/images/products/kultra-australian-merino-wool-desk-mat-ash-gray.webp`]
   },

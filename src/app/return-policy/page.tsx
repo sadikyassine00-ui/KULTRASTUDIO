@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, ShieldCheck, RefreshCw, Truck, Mail, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, ShieldCheck, RefreshCw, Truck, Mail } from "lucide-react";
 import { Navbar } from "@/components/store/Navbar";
 import { Footer } from "@/components/store/Footer";
 
@@ -85,9 +85,9 @@ export default function ReturnPolicyPage() {
               <Mail className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="font-serif font-bold text-base text-stone-900">Fast 2–4 Day Refunds</h3>
+              <h3 className="font-serif font-bold text-base text-stone-900">Fast 2-4 Day Refunds</h3>
               <p className="text-xs text-stone-600 mt-1 leading-normal">
-                Full refunds credited back to your payment method within 2–4 days after inspection.
+                Full refunds credited back to your payment method within 2-4 days after inspection.
               </p>
             </div>
           </div>

@@ -293,7 +293,7 @@ export function HeroSection() {
 
               {/* Single Line Small-Caps Buy Button Micro-Copy */}
               <p className="text-[10px] uppercase font-semibold text-stone-500 text-center tracking-wider py-1">
-                Complimentary US Shipping (8–13 Business Days) | 30-Day Risk-Free Trial
+                Complimentary US Shipping (8-13 Business Days) | 30-Day Risk-Free Trial
               </p>
 
               {/* 7. Three Micro Trust Badges Line */}
