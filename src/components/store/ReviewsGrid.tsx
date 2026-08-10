@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { Star, ShieldCheck, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -14,45 +13,41 @@ interface Review {
   title: string;
   content: string;
   variant: string;
-  image?: string;
   verified: boolean;
 }
 
 const REVIEWS: Review[] = [
   {
     id: "rev-1",
-    name: "Marcus Vance",
-    role: "Senior Software Architect",
+    name: "Marcus V.",
+    role: "Software Engineer",
     rating: 5,
-    date: "3 days ago",
-    title: "Dampens mechanical keyboard desk rattle.",
-    content: "I use an aluminum Keychron Q1 with lubricant key switches. Before this mat, typing echoed through my wooden desk. The 3.0mm Merino wool dampens key sound noticeably, and the zero-slide micro-grip dot backing stays firmly in place.",
-    variant: "Charcoal / Large",
-    image: "/images/hero_desk_mat.png",
+    date: "4 days ago",
+    title: "Cut down mechanical keyboard desk hollow sound.",
+    content: "Took about two hours to sit completely flat after unboxing, but it's great now. Dampens the hollow thock from my Keychron keyboard so my desk doesn't echo during late-night coding sessions. Mouse slides smooth with no tracking issues.",
+    variant: "Dark Charcoal / Large",
     verified: true
   },
   {
     id: "rev-2",
-    name: "Elena Rostova",
-    role: "UX Designer & Photographer",
+    name: "Elena R.",
+    role: "Product Designer",
     rating: 5,
     date: "1 week ago",
-    title: "Quiet, comfortable daily desk surface.",
-    content: "The Heather Grey wool texture brings comfortable warmth to my studio setup. My wrists stay comfortable during long editing sessions, and mouse tracking with optical sensors works smoothly.",
-    variant: "Heather Grey / Medium",
-    image: "/images/heather_grey_setup.png",
+    title: "Way nicer on the wrists than cold standing desk tops.",
+    content: "Bought the Light Ash Grey for my motorized oak desk. Feels warm under my arms when typing in the morning. Dust and pet hair pick up like any felt mat, but a quick pass with a lint roller cleans it up in 5 seconds.",
+    variant: "Light Ash Grey / Medium",
     verified: true
   },
   {
     id: "rev-3",
     name: "David K.",
-    role: "Product Designer",
+    role: "Backend Dev",
     rating: 5,
     date: "2 weeks ago",
-    title: "Durable wool that doesn't pill.",
-    content: "Cheaper felt pads pill within two weeks. This 300g/m² virgin wool has held up cleanly after 3 months of daily work. The anti-slip micro-grip dot backing grips solid wood without slipping.",
-    variant: "Charcoal / Medium",
-    image: "/images/wool_cork_texture.png",
+    title: "Doesn't slide around at all.",
+    content: "My last cheap felt pad was sliding everywhere every time I pushed my keyboard back. The micro-dot backing on this one actually locks down to solid wood. No weird rubber smell when opening it either.",
+    variant: "Dark Charcoal / Medium",
     verified: true
   }
 ];
@@ -93,7 +88,7 @@ export function ReviewsGrid() {
         </div>
       </div>
 
-      {/* 3-Column Reviews Cards Grid */}
+      {/* 3-Column Human Reviews Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {REVIEWS.map((rev) => (
           <motion.div
@@ -120,36 +115,18 @@ export function ReviewsGrid() {
               <h3 className="font-serif font-bold text-base text-stone-900 leading-snug">
                 "{rev.title}"
               </h3>
-              <p className="text-xs text-stone-600 mt-2.5 leading-relaxed">
+              <p className="text-xs sm:text-sm text-stone-600 mt-2.5 leading-relaxed">
                 {rev.content}
               </p>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-stone-200/80">
-              {/* Customer Photo Thumbnail */}
-              {rev.image && (
-                <div className="relative w-full h-32 rounded-xl overflow-hidden mb-3 border border-stone-200 shadow-xs">
-                  <Image
-                    src={rev.image}
-                    alt={`${rev.name}'s desk setup`}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover"
-                  />
-                  <div className="absolute bottom-2 left-2 glass-dark-card text-[10px] font-semibold px-2 py-0.5 rounded">
-                    Customer Photo
-                  </div>
-                </div>
-              )}
-
-              <div className="flex items-center justify-between">
-                <div>
-                  <div className="text-xs font-bold text-stone-900">{rev.name}</div>
-                  <div className="text-[10px] text-stone-500">{rev.role}</div>
-                </div>
-                <div className="text-[10px] text-stone-600 font-semibold bg-stone-100 px-2.5 py-1 rounded-md border border-stone-200">
-                  {rev.variant}
-                </div>
+            <div className="mt-6 pt-4 border-t border-stone-200/80 flex items-center justify-between">
+              <div>
+                <div className="text-xs font-bold text-stone-900">{rev.name}</div>
+                <div className="text-[10px] text-stone-500">{rev.role}</div>
+              </div>
+              <div className="text-[10px] text-stone-600 font-semibold bg-stone-100 px-2.5 py-1 rounded-md border border-stone-200">
+                {rev.variant}
               </div>
             </div>
           </motion.div>
