@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar } from "@/components/store/Navbar";
 import { HeroSection } from "@/components/store/HeroSection";
+import { ProductDetailsSpec } from "@/components/store/ProductDetailsSpec";
 import { BentoGrid } from "@/components/store/BentoGrid";
 import { DarkSetupGallery } from "@/components/store/DarkSetupGallery";
 import { CertificationsBanner } from "@/components/store/CertificationsBanner";
@@ -24,6 +25,7 @@ export default function StorePage() {
         {/* Main Architectural Showcase Content */}
         <main className="flex-1">
           <HeroSection />
+          <ProductDetailsSpec />
           <BentoGrid />
           <DarkSetupGallery />
           <CertificationsBanner />
