@@ -12,7 +12,7 @@ export async function GET() {
     <item>
       <g:id>KULTRA-MAT-MERINO-01</g:id>
       <g:title>100% Merino Wool Desk Mat</g:title>
-      <g:description>Full 3.0mm solid Australian Merino wool felt desk mat with zero-slide micro-grip dot backing. Absorbs mechanical keyboard acoustic noise (-14dB) and protects desk surfaces.</g:description>
+      <g:description>Full 3.0mm solid Australian Merino wool felt desk mat with zero-slide micro-grip dot backing. Absorbs mechanical keyboard acoustic noise (-14dB) and protects desk surfaces from scratches and wear. Precision-crafted 900mm x 400mm (~35.4" x 15.7") workspace pad designed for mechanical keyboard enthusiasts, modern home office setups, and optical mouse tracking. Naturally water-resistant, dirt-repellent, and available in Dark Charcoal and Light Ash Grey. Includes a 30-Day Risk-Free Trial and Free US Shipping.</g:description>
       <g:link>${baseUrl}</g:link>
       <g:image_link>${baseUrl}/images/hero_desk_mat.png</g:image_link>
       <g:availability>in_stock</g:availability>
