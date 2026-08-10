@@ -45,8 +45,8 @@ export function DarkSetupGallery() {
           >
             <div className="relative w-full h-80 sm:h-96 overflow-hidden">
               <Image
-                src="/images/dark_studio_setup.png"
-                alt="KULTRA Studio Dark Charcoal 100% Merino Wool Desk Mat with micro-grip backing"
+                src="/images/products/kultra-wool-desk-pad-dimensions-keyboard-mouse-setup.webp"
+                alt="Overhead view of 900mm x 400mm wool desk pad showing scale with mechanical keyboard, mouse, and workspace setup"
                 fill
                 sizes="(max-width: 1024px) 100vw, 60vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -85,8 +85,8 @@ export function DarkSetupGallery() {
             >
               <div className="relative w-full h-52 rounded-2xl overflow-hidden mb-4 border border-stone-800">
                 <Image
-                  src="/images/audio_keyboard_setup.png"
-                  alt="KULTRA Studio Light Ash Grey 100% Merino Wool Desk Mat overhead view on solid desk"
+                  src="/images/products/kultra-australian-merino-wool-desk-mat-ash-gray.webp"
+                  alt="100% Australian Merino Wool Desk Mat in Light Ash Grey on a modern wooden desk with mechanical keyboard"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"

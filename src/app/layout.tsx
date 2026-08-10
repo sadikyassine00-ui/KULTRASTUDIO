@@ -63,9 +63,9 @@ export const metadata: Metadata = {
     description: "Full 3.0mm solid Australian Merino wool felt desk mat with zero-slide micro-grip dot backing.",
     images: [
       {
-        url: "/images/hero_desk_mat.png",
+        url: "/images/products/kultra-australian-merino-wool-desk-mat-ash-gray.webp",
         width: 1200,
-        height: 630,
+        height: 1200,
         alt: "KULTRA Studio 100% Merino Wool Desk Mat"
       }
     ]
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "100% Merino Wool Desk Mat | KULTRA Studio",
     description: "Full 3.0mm solid Australian Merino wool felt desk mat with zero-slide micro-grip dot backing.",
-    images: ["/images/hero_desk_mat.png"]
+    images: ["/images/products/kultra-australian-merino-wool-desk-mat-ash-gray.webp"]
   },
   robots: {
     index: true,

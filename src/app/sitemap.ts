@@ -11,10 +11,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1.0,
       images: [
-        `${baseUrl}/images/hero_desk_mat.png`,
-        `${baseUrl}/images/wool_cork_texture.png`,
-        `${baseUrl}/images/heather_grey_setup.png`,
-        `${baseUrl}/images/cork_base_detail.png`
+        `${baseUrl}/images/products/kultra-australian-merino-wool-desk-mat-ash-gray.webp`,
+        `${baseUrl}/images/products/kultra-3mm-solid-wool-felt-texture-close-up.webp`,
+        `${baseUrl}/images/products/kultra-desk-mat-anti-slip-micro-grip-dot-backing.webp`,
+        `${baseUrl}/images/products/kultra-wool-desk-pad-dimensions-keyboard-mouse-setup.webp`,
+        `${baseUrl}/images/products/kultra-merino-desk-mat-features-acoustic-dampening.webp`,
+        `${baseUrl}/images/products/kultra-desk-mat-dark-charcoal-light-ash-grey.webp`
       ]
     },
     {
