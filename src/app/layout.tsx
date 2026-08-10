@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import { StoreProvider } from "@/context/StoreContext";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -171,6 +173,9 @@ export default function RootLayout({
         <StoreProvider>
           {children}
         </StoreProvider>
+        {/* Vercel Analytics & Speed Insights Integration */}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
