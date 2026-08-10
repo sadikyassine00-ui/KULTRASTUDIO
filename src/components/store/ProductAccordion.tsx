@@ -69,7 +69,7 @@ export function ProductAccordion() {
       icon: <Truck className="w-4 h-4 text-amber-700" />,
       content: (
         <div className="space-y-2 text-xs text-stone-600 leading-relaxed">
-          <p>• <strong>Free Shipping:</strong> Automatically applied to orders over $70.00 USD (2–4 business days delivery).</p>
+          <p>• <strong>Free Shipping:</strong> Automatically applied to orders over $70.00 USD (8–12 business days delivery).</p>
           <p>• <strong>30-Day Trial:</strong> Work with the mat on your desk for 30 days. If it doesn't fit your routine, return it for a full refund.</p>
           <p>• <strong>Lifetime Guarantee:</strong> Covers edge fraying or micro-grip dot backing delamination for life.</p>
         </div>

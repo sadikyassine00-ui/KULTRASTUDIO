@@ -64,8 +64,8 @@ export function StructuredData() {
           },
           "transitTime": {
             "@type": "QuantitativeValue",
-            "minValue": 2,
-            "maxValue": 4,
+            "minValue": 8,
+            "maxValue": 12,
             "unitCode": "DAY"
           }
         }
@@ -150,7 +150,7 @@ export function StructuredData() {
         "name": "What is the 30-Day Trial and Shipping policy?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We offer complimentary express shipping on orders over $70.00 USD (2–4 business days delivery) along with a 30-day risk-free desk trial and a lifetime guarantee covering wool felt and micro-grip backing."
+          "text": "We offer complimentary express shipping on orders over $70.00 USD (8–12 business days delivery) along with a 30-day risk-free desk trial and a lifetime guarantee covering wool felt and micro-grip backing."
         }
       }
     ]

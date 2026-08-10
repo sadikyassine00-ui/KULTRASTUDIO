@@ -18,7 +18,7 @@ export function ProductSchema() {
       "name": "KULTRA Studio"
     },
     "material": "100% Virgin Merino Wool Felt, Anti-Slip Micro-Grip Backing",
-    "color": "Charcoal, Heather Grey",
+    "color": "Dark Charcoal, Light Ash Grey",
     "offers": {
       "@type": "Offer",
       "url": "https://usekultra.com",
@@ -48,8 +48,8 @@ export function ProductSchema() {
           },
           "transitTime": {
             "@type": "QuantitativeValue",
-            "minValue": 2,
-            "maxValue": 4,
+            "minValue": 8,
+            "maxValue": 12,
             "unitCode": "DAY"
           }
         }
@@ -74,7 +74,7 @@ export function ProductSchema() {
           "@type": "Person",
           "name": "Marcus Vance"
         },
-        "reviewBody": "Dampens mechanical keyboard key clack noticeably. The 3mm Merino wool is soft and the micro-grip backing stays firmly in place."
+        "reviewBody": "Dampens mechanical keyboard key clack noticeably. The 3.0mm solid Merino wool is soft and the micro-grip backing stays firmly in place."
       }
     ]
   };
