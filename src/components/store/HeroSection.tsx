@@ -253,7 +253,7 @@ export function HeroSection() {
                 </span>
               </div>
               <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-full flex items-center gap-1">
-                <ShieldCheck className="w-3.5 h-3.5" /> In Stock • Ships in 24h
+                <ShieldCheck className="w-3.5 h-3.5" /> In Stock • 8-13 Days Delivery
               </span>
             </div>
 

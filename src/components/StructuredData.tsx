@@ -61,14 +61,14 @@ export function StructuredData() {
           "@type": "ShippingDeliveryTime",
           "handlingTime": {
             "@type": "QuantitativeValue",
-            "minValue": 0,
-            "maxValue": 1,
+            "minValue": 1,
+            "maxValue": 2,
             "unitCode": "DAY"
           },
           "transitTime": {
             "@type": "QuantitativeValue",
             "minValue": 8,
-            "maxValue": 12,
+            "maxValue": 13,
             "unitCode": "DAY"
           }
         }

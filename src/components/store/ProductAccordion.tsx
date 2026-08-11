@@ -64,13 +64,10 @@ export function ProductAccordion() {
       content: (
         <div className="space-y-2 text-xs sm:text-sm text-stone-600 leading-relaxed">
           <p>
-            • <strong>Free Shipping:</strong> Automatically applied to orders over $70.00 USD (8-12 business days delivery).
+            • <strong>Free US Shipping:</strong> Automatically applied to all US orders (8-13 business days delivery).
           </p>
           <p>
-            • <strong>Flat-Rate Shipping:</strong> $5.00 USD flat rate for orders under $70.00 USD.
-          </p>
-          <p>
-            Orders placed before 2:00 PM EST ship within 24 business hours directly in plastic-free eco paper roll tubes.
+            • <strong>Order Processing:</strong> Orders are processed within 1 to 2 business days and shipped in plastic-free eco paper roll tubes with full door-to-door carrier tracking.
           </p>
         </div>
       )
