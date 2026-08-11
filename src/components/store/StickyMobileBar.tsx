@@ -50,7 +50,7 @@ export function StickyMobileBar() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ type: "spring", damping: 25, stiffness: 200 }}
-          className="fixed bottom-0 left-0 right-0 z-40 bg-stone-950/95 backdrop-blur-md text-stone-50 border-t border-stone-800 p-3 sm:px-8 shadow-2xl"
+          className="fixed bottom-0 left-0 right-0 z-40 bg-stone-900/95 backdrop-blur-md text-stone-50 border-t border-stone-800 p-3 sm:px-8 shadow-2xl"
         >
           <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
             {/* Product Thumbnail & Details */}
@@ -82,14 +82,14 @@ export function StickyMobileBar() {
               </div>
             </div>
 
-            {/* Quick Action Button with Gold Glow */}
+            {/* Quick Action Button */}
             <motion.button
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.96 }}
               onClick={handleMobileAddToCart}
-              className="bg-gradient-to-r from-amber-400 via-amber-300 to-amber-400 hover:from-amber-300 hover:to-amber-400 text-stone-950 font-extrabold text-xs px-4 py-3 rounded-xl shadow-[0_4px_16px_rgba(251,191,36,0.5)] transition-all flex items-center gap-2 uppercase tracking-wider border border-amber-300"
+              className="bg-amber-400 hover:bg-amber-500 text-stone-950 font-bold text-xs px-4 py-3 rounded-xl shadow-lg transition-colors flex items-center gap-2 uppercase tracking-wider"
             >
-              <ShoppingBag className="w-4 h-4 text-stone-950" />
+              <ShoppingBag className="w-4 h-4" />
               <span>Add to Cart</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </motion.button>

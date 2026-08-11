@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Check, Sparkles } from "lucide-react";
+import { Check } from "lucide-react";
 import { trackSelectVariant } from "@/lib/analytics";
 
 export interface ColorVariant {
@@ -104,28 +104,28 @@ export function VariantSelector({
                 role="radio"
                 aria-checked={isSelected}
                 onClick={() => handleColorClick(c.name)}
-                className={`p-3 rounded-2xl border-2 text-left flex items-start gap-3 transition-all relative group ${
+                className={`p-2.5 rounded-xl border-2 text-left flex items-start gap-2.5 transition-all relative group ${
                   isSelected
-                    ? "border-stone-900 bg-stone-900 text-stone-50 shadow-sm"
-                    : "border-stone-200 bg-white text-stone-800 hover:border-stone-300 hover:bg-stone-50"
+                    ? "border-stone-900 bg-stone-100/90 text-stone-900 ring-1 ring-stone-900/20 shadow-2xs"
+                    : "border-stone-200/80 bg-white text-stone-700 hover:border-stone-300 hover:bg-stone-50/50"
                 }`}
               >
                 {/* Swatch Circle */}
                 <div
-                  className="w-4 h-4 rounded-full mt-0.5 border border-stone-400 shadow-xs flex items-center justify-center shrink-0"
+                  className="w-4 h-4 rounded-full mt-0.5 border border-stone-400/80 shadow-xs flex items-center justify-center shrink-0"
                   style={{ backgroundColor: c.hex }}
                 >
-                  {isSelected && <Check className="w-2.5 h-2.5 text-stone-100" />}
+                  {isSelected && <Check className={`w-2.5 h-2.5 ${c.name === "Light Ash Grey" ? "text-stone-900" : "text-stone-100"}`} />}
                 </div>
 
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between gap-1">
-                    <span className="text-xs font-bold leading-tight">{c.name}</span>
-                    <span className={`text-[9px] font-semibold uppercase px-1.5 py-0.2 rounded ${isSelected ? "bg-amber-400 text-stone-950" : "bg-emerald-50 text-emerald-700 border border-emerald-200"}`}>
+                    <span className="text-xs font-bold leading-tight text-stone-900">{c.name}</span>
+                    <span className="text-[9px] font-medium text-emerald-700 bg-emerald-50 border border-emerald-200/60 px-1.5 py-0.2 rounded">
                       In Stock
                     </span>
                   </div>
-                  <p className={`text-[10px] mt-0.5 leading-snug line-clamp-2 ${isSelected ? "text-stone-300" : "text-stone-500"}`}>
+                  <p className="text-[10px] mt-0.5 leading-snug line-clamp-2 text-stone-500">
                     {c.subtitle}
                   </p>
                 </div>
@@ -160,15 +160,15 @@ export function VariantSelector({
                 onClick={() => handleSizeClick(s.name)}
                 className={`p-2.5 rounded-xl border-2 text-left transition-all ${
                   isSelected
-                    ? "border-stone-900 bg-stone-900 text-stone-50 shadow-xs"
-                    : "border-stone-200 bg-white text-stone-800 hover:border-stone-300"
+                    ? "border-stone-900 bg-stone-100/90 text-stone-900 ring-1 ring-stone-900/20 shadow-2xs"
+                    : "border-stone-200/80 bg-white text-stone-700 hover:border-stone-300 hover:bg-stone-50/50"
                 }`}
               >
                 <div className="flex justify-between items-center">
-                  <span className="text-xs font-bold">{s.name} ({s.price})</span>
-                  {isSelected && <Check className="w-3 h-3 text-amber-400" />}
+                  <span className="text-xs font-bold text-stone-900">{s.name} ({s.price})</span>
+                  {isSelected && <Check className="w-3 h-3 text-stone-900" />}
                 </div>
-                <div className={`text-[10px] font-mono mt-0.5 ${isSelected ? "text-stone-300" : "text-stone-500"}`}>
+                <div className="text-[10px] font-mono mt-0.5 text-stone-500">
                   {s.dimensions}
                 </div>
               </button>

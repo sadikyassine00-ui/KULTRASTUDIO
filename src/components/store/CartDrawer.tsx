@@ -174,7 +174,7 @@ export function CartDrawer() {
                 )}
               </div>
 
-              {/* Drawer Footer with Subtotal & High-Contrast Gold Checkout Button */}
+              {/* Drawer Footer with Subtotal & Checkout */}
               {cart.length > 0 && (
                 <div className="p-6 bg-white border-t border-stone-200 space-y-4">
                   <div className="space-y-2 text-xs">
@@ -195,15 +195,15 @@ export function CartDrawer() {
                   </div>
 
                   <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.97 }}
+                    whileHover={{ scale: 1.01 }}
+                    whileTap={{ scale: 0.98 }}
                     disabled={isCheckoutLoading}
                     onClick={onCheckoutClick}
-                    className="w-full bg-gradient-to-r from-amber-400 via-amber-300 to-amber-400 hover:from-amber-300 hover:to-amber-400 text-stone-950 font-extrabold py-4 rounded-2xl shadow-[0_4px_24px_rgba(251,191,36,0.5)] ring-2 ring-amber-400/80 transition-all flex items-center justify-center gap-2 uppercase tracking-wider text-xs border border-amber-300"
+                    className="w-full bg-stone-900 hover:bg-stone-800 text-stone-50 font-bold py-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 uppercase tracking-wider text-xs border border-stone-800"
                   >
-                    <Lock className="w-4 h-4 text-stone-950" />
+                    <Lock className="w-4 h-4 text-amber-400" />
                     <span>{isCheckoutLoading ? "Creating Order..." : "Checkout on Shopify"}</span>
-                    <ArrowRight className="w-4 h-4 text-stone-950" />
+                    <ArrowRight className="w-4 h-4" />
                   </motion.button>
 
                   <p className="text-[10px] text-center text-stone-400 font-medium">

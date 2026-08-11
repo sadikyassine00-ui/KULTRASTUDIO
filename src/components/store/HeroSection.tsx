@@ -257,29 +257,29 @@ export function HeroSection() {
               </span>
             </div>
 
-            {/* 4. High-Contrast High-Converting Amber CTA Button */}
+            {/* 4. Sole Dominant Call To Action Button (Dark Obsidian Luxury Aesthetic) */}
             <div className="pt-1 flex flex-col gap-1.5 order-first lg:order-none">
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={handleAddToCart}
-                className="w-full bg-gradient-to-r from-amber-400 via-amber-300 to-amber-400 hover:from-amber-300 hover:to-amber-400 text-stone-950 font-extrabold py-3.5 sm:py-4 px-4 sm:px-6 rounded-2xl shadow-[0_4px_24px_rgba(251,191,36,0.5)] ring-2 ring-amber-400/80 transition-all flex items-center justify-between group border border-amber-300"
+                className="w-full bg-stone-900 hover:bg-stone-800 text-stone-50 font-bold py-3.5 sm:py-4 px-4 sm:px-6 rounded-2xl shadow-xl transition-all flex items-center justify-between group border border-stone-800"
                 id="hero-add-to-cart-btn"
               >
                 <div className="flex items-center gap-2.5">
-                  <span className="text-xs sm:text-base uppercase tracking-wider font-extrabold text-stone-950">Add to Cart</span>
-                  <span className="bg-stone-950 text-amber-300 text-xs px-2.5 py-1 rounded-lg font-mono font-bold">
+                  <span className="text-xs sm:text-base uppercase tracking-wider font-extrabold text-stone-50">Add to Cart</span>
+                  <span className="bg-stone-800 text-stone-300 text-xs px-2.5 py-1 rounded-lg font-mono font-bold">
                     ${activeVariant.price.amount}
                   </span>
                 </div>
-                <div className="bg-stone-950 group-hover:bg-stone-900 text-amber-400 text-xs px-3 py-1.5 rounded-xl flex items-center gap-1 font-bold shadow-md transition-colors">
+                <div className="flex items-center gap-1.5 text-xs text-amber-400 group-hover:translate-x-1 transition-transform font-bold">
                   <span>CHECKOUT</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4" />
                 </div>
               </motion.button>
 
               {/* Single Line Small-Caps Buy Button Micro-Copy */}
-              <p className="text-[9px] sm:text-[10px] uppercase font-semibold text-stone-600 text-center tracking-wider py-0.5">
+              <p className="text-[9px] sm:text-[10px] uppercase font-semibold text-stone-500 text-center tracking-wider py-0.5">
                 Complimentary US Shipping (8-13 Business Days) | 30-Day Risk-Free Trial
               </p>
             </div>
@@ -289,7 +289,7 @@ export function HeroSection() {
               Full 3.0mm solid slab of pure Australian Merino wool felt with a low-profile zero-slide micro-grip dot backing. Dampens key sound and protects desk wood.
             </p>
 
-            {/* 6. Variant Selector Component */}
+            {/* 6. Variant Selector Component (Softened Active Cards) */}
             <VariantSelector
               selectedColor={selectedColor}
               selectedSize={selectedSize}
