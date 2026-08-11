@@ -138,9 +138,9 @@ export function HeroSection() {
 
       {/* 2-Column Responsive Compact Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 sm:gap-6 lg:gap-8 items-start">
-        {/* Left Column: Product Showcase Gallery (Mobile height capped at 22vh/160px for guaranteed above-the-fold clearance) */}
+        {/* Left Column: Product Showcase Gallery */}
         <div className="lg:col-span-7 flex flex-col gap-1.5 sm:gap-3">
-          {/* Main Showcase Image (Alibaba Precision Magnifier Zoom Panel) */}
+          {/* Main Showcase Image */}
           <div
             className="relative w-full aspect-square max-h-[22vh] sm:max-h-[38vh] lg:max-h-[420px] rounded-2xl sm:rounded-3xl overflow-hidden bg-stone-200/80 border border-stone-300/80 shadow-md sm:shadow-lg group cursor-zoom-in select-none"
             onMouseEnter={() => setIsZoomed(true)}
@@ -187,7 +187,7 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Gallery Thumbnails (6 WebP Items - Compact on mobile) */}
+          {/* Gallery Thumbnails */}
           <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto py-0.5">
             {images.map((img, idx) => (
               <button
@@ -216,7 +216,7 @@ export function HeroSection() {
 
         {/* Right Column: Packed Buy Box Container */}
         <div className="lg:col-span-5">
-          <div className="bg-stone-100/90 backdrop-blur-md border border-stone-300/80 p-3 sm:p-5 lg:p-6 rounded-2xl sm:rounded-3xl shadow-lg lg:shadow-xl flex flex-col gap-2 sm:gap-3">
+          <div className="bg-stone-100/90 backdrop-blur-md border border-stone-300/80 p-3.5 sm:p-5 lg:p-6 rounded-2xl sm:rounded-3xl shadow-lg lg:shadow-xl flex flex-col gap-2 sm:gap-3">
             {/* 1. Category Pill + Social Rating Stars */}
             <div className="flex items-center justify-between gap-2">
               <span className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-widest text-amber-800 bg-amber-100/90 border border-amber-200 px-2 py-0.5 rounded-full">
@@ -237,7 +237,7 @@ export function HeroSection() {
               </a>
             </div>
 
-            {/* 2. Main Title (Sole H1 on Page) */}
+            {/* 2. Main Title */}
             <h1 className="font-serif text-lg sm:text-3xl lg:text-4xl font-bold tracking-tight text-stone-900 leading-snug sm:leading-tight">
               100% Merino Wool Desk Mat
             </h1>
@@ -257,29 +257,29 @@ export function HeroSection() {
               </span>
             </div>
 
-            {/* 4. Primary Add to Cart CTA Button & Microcopy (Positioned immediately below Price on mobile for guaranteed above-the-fold clearance) */}
-            <div className="pt-0.5 flex flex-col gap-1.5 order-first lg:order-none">
+            {/* 4. High-Contrast High-Converting Amber CTA Button */}
+            <div className="pt-1 flex flex-col gap-1.5 order-first lg:order-none">
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={handleAddToCart}
-                className="w-full bg-stone-900 hover:bg-stone-800 text-stone-50 font-bold py-3 sm:py-3.5 px-4 sm:px-5 rounded-xl shadow-lg transition-all flex items-center justify-between group border border-stone-800"
+                className="w-full bg-gradient-to-r from-amber-400 via-amber-300 to-amber-400 hover:from-amber-300 hover:to-amber-400 text-stone-950 font-extrabold py-3.5 sm:py-4 px-4 sm:px-6 rounded-2xl shadow-[0_4px_24px_rgba(251,191,36,0.5)] ring-2 ring-amber-400/80 transition-all flex items-center justify-between group border border-amber-300"
                 id="hero-add-to-cart-btn"
               >
-                <div className="flex items-center gap-2">
-                  <span className="text-xs sm:text-sm uppercase tracking-wider font-semibold">Add to Cart</span>
-                  <span className="bg-stone-800 text-stone-300 text-xs px-2 py-0.5 rounded font-mono">
+                <div className="flex items-center gap-2.5">
+                  <span className="text-xs sm:text-base uppercase tracking-wider font-extrabold text-stone-950">Add to Cart</span>
+                  <span className="bg-stone-950 text-amber-300 text-xs px-2.5 py-1 rounded-lg font-mono font-bold">
                     ${activeVariant.price.amount}
                   </span>
                 </div>
-                <div className="flex items-center gap-1 text-xs text-amber-400 group-hover:translate-x-1 transition-transform font-bold">
+                <div className="bg-stone-950 group-hover:bg-stone-900 text-amber-400 text-xs px-3 py-1.5 rounded-xl flex items-center gap-1 font-bold shadow-md transition-colors">
                   <span>CHECKOUT</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
               </motion.button>
 
               {/* Single Line Small-Caps Buy Button Micro-Copy */}
-              <p className="text-[9px] sm:text-[10px] uppercase font-semibold text-stone-500 text-center tracking-wider py-0.5">
+              <p className="text-[9px] sm:text-[10px] uppercase font-semibold text-stone-600 text-center tracking-wider py-0.5">
                 Complimentary US Shipping (8-13 Business Days) | 30-Day Risk-Free Trial
               </p>
             </div>

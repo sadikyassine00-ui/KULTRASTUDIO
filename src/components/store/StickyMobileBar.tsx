@@ -50,28 +50,28 @@ export function StickyMobileBar() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ type: "spring", damping: 25, stiffness: 200 }}
-          className="fixed bottom-0 left-0 right-0 z-40 bg-stone-900/95 backdrop-blur-md text-stone-50 border-t border-stone-800 p-3.5 sm:px-8 shadow-2xl"
+          className="fixed bottom-0 left-0 right-0 z-40 bg-stone-950/95 backdrop-blur-md text-stone-50 border-t border-stone-800 p-3 sm:px-8 shadow-2xl"
         >
-          <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+          <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
             {/* Product Thumbnail & Details */}
-            <div className="flex items-center gap-3">
-              <div className="relative w-11 h-11 rounded-xl overflow-hidden bg-stone-800 border border-stone-700 shrink-0">
+            <div className="flex items-center gap-2.5">
+              <div className="relative w-10 h-10 rounded-xl overflow-hidden bg-stone-800 border border-stone-700 shrink-0">
                 <Image
                   src={activeVariant.image}
                   alt={activeVariant.title}
                   fill
-                  sizes="44px"
+                  sizes="40px"
                   className="object-cover"
                 />
               </div>
 
               <div>
-                <div className="flex items-center gap-1 text-[11px] font-semibold text-stone-300">
+                <div className="flex items-center gap-1 text-xs font-semibold text-stone-200">
                   <span className="text-white font-serif font-bold">Merino Desk Mat</span>
                   <span className="text-stone-500">•</span>
-                  <span className="text-amber-400">{activeVariant.colorName}</span>
+                  <span className="text-amber-400 font-bold">${activeVariant.price.amount}</span>
                 </div>
-                <div className="flex items-center gap-1 text-[10px] text-stone-400 mt-0.5">
+                <div className="flex items-center gap-1 text-[10px] text-stone-400">
                   <div className="flex text-amber-400">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-2.5 h-2.5 fill-amber-400 text-amber-400" />
@@ -82,26 +82,17 @@ export function StickyMobileBar() {
               </div>
             </div>
 
-            {/* Quick Action Button */}
-            <div className="flex items-center gap-3">
-              <div className="text-right hidden xs:block">
-                <div className="font-serif font-bold text-base text-stone-100">
-                  ${activeVariant.price.amount}
-                </div>
-                <div className="text-[10px] text-emerald-400 font-medium">Free Shipping</div>
-              </div>
-
-              <motion.button
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.96 }}
-                onClick={handleMobileAddToCart}
-                className="bg-amber-400 hover:bg-amber-500 text-stone-950 font-bold text-xs px-4 py-3 rounded-xl shadow-lg transition-colors flex items-center gap-2 uppercase tracking-wider"
-              >
-                <ShoppingBag className="w-4 h-4" />
-                <span>Add to Cart</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </motion.button>
-            </div>
+            {/* Quick Action Button with Gold Glow */}
+            <motion.button
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.96 }}
+              onClick={handleMobileAddToCart}
+              className="bg-gradient-to-r from-amber-400 via-amber-300 to-amber-400 hover:from-amber-300 hover:to-amber-400 text-stone-950 font-extrabold text-xs px-4 py-3 rounded-xl shadow-[0_4px_16px_rgba(251,191,36,0.5)] transition-all flex items-center gap-2 uppercase tracking-wider border border-amber-300"
+            >
+              <ShoppingBag className="w-4 h-4 text-stone-950" />
+              <span>Add to Cart</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </motion.button>
           </div>
         </motion.div>
       )}
