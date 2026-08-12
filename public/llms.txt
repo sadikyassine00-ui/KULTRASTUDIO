@@ -1,14 +1,20 @@
 # KULTRA Studio
-> Premium 100% Australian Merino Wool Desk Mats for high-performance workspace setups.
 
-## Product Specifications
-- Product: KULTRA 100% Australian Merino Wool Desk Mat
-- Price: $80.00 USD
-- Guarantee & Shipping: 30-Day Risk-Free Trial & Free US Shipping
-- Dimensions: 900mm x 400mm (~35.4" x 15.7")
-- Thickness: 3.0mm solid Merino wool felt
-- Key Features: Zero-slide micro-grip dot backing, -14dB acoustic keyboard noise dampening, precision laser-cut raw edges, water-repellent finish.
+> Premium 100% Australian Merino Wool Desk Mats engineered for high-performance workspace setups, mechanical keyboard acoustic dampening, and desk protection.
 
-## Official Links
-- Storefront: https://usekultra.com
-- Contact: support@usekultra.com
+## Core Products & Specifications
+
+- [100% Merino Wool Desk Mat](https://usekultra.com): Solid 3.0mm Grade-A Australian Merino wool felt desk mat ($80.00 USD) featuring zero-slide micro-grip dot backing, -14dB acoustic keyboard noise dampening, and water-repellent finish.
+
+## Customer Care & Store Policies
+
+- [30-Day Risk-Free Return Policy](https://usekultra.com/return-policy): Details on our 30-day workspace trial, prepaid US return shipping labels, and 2 to 4 business days full refund processing.
+- [Shipping & Delivery Policy](https://usekultra.com/pages/shipping-policy): Details on complimentary US shipping ($0.00), 1 to 2 business days order processing, and 8 to 13 business days delivery timelines.
+- [Privacy Policy](https://usekultra.com/pages/privacy-policy): Privacy and data protection disclosure for HostKeys LLC operating as KULTRA Studio, covering SSL encryption and Stripe payment processing.
+- [Terms of Service](https://usekultra.com/pages/terms-of-service): Terms of service agreement covering store usage, ordering, intellectual property, and governing law in Sheridan, Wyoming, USA.
+- [Customer Support & Contact](https://usekultra.com/pages/contact): Corporate contact details for HostKeys LLC (30 N Gould St Ste R, Sheridan, WY 82801, USA) and email support (support@kulturastudio.com).
+
+## Technical Endpoints & Feeds
+
+- [Google Shopping Product Feed](https://usekultra.com/api/google-feed): RSS 2.0 XML product feed for Google Merchant Center indexing and shopping campaigns.
+- [Dynamic XML Sitemap](https://usekultra.com/sitemap.xml): Primary sitemap containing all indexable canonical URLs and product images.
