@@ -40,6 +40,14 @@ export const metadata: Metadata = {
     template: "%s | KULTRA Studio"
   },
   description: "Elevate your workspace with the KULTRA 3.0mm solid Australian Merino wool felt desk mat. Features zero-slide micro-grip dot backing, -14dB keyboard noise dampening, and precision laser-cut edges. 30-Day Trial & Free US Shipping.",
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' }
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/apple-icon.svg',
+  },
   keywords: [
     "wool desk mat",
     "desk blotter",
