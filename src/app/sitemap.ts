@@ -20,13 +20,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ]
     },
     {
-      url: `${baseUrl}/pages/shipping-policy`,
+      url: `${baseUrl}/shipping`,
       lastModified: currentDate,
       changeFrequency: "monthly",
-      priority: 0.5
+      priority: 0.6
     },
     {
       url: `${baseUrl}/return-policy`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.6
+    },
+    {
+      url: `${baseUrl}/pages/shipping-policy`,
       lastModified: currentDate,
       changeFrequency: "monthly",
       priority: 0.5
