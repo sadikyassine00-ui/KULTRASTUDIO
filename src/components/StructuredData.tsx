@@ -98,7 +98,7 @@ export function StructuredData() {
     ]
   };
 
-  // 2. Organization Schema
+  // 2. Organization Schema (Establishes domain authority & Knowledge Graph)
   const organizationSchema = {
     "@context": "https://schema.org/",
     "@type": "Organization",
@@ -111,7 +111,27 @@ export function StructuredData() {
     ]
   };
 
-  // 3. FAQ Schema (Grants Google Accordion Rich Snippets)
+  // 3. BreadcrumbList Schema (Replaces URLs in search with clean breadcrumbs)
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": baseUrl
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "100% Merino Wool Desk Mat",
+        "item": baseUrl
+      }
+    ]
+  };
+
+  // 4. FAQ Schema (Grants Google Accordion Rich Snippets)
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -152,6 +172,10 @@ export function StructuredData() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <script
         type="application/ld+json"
