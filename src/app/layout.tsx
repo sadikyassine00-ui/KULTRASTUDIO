@@ -42,11 +42,11 @@ export const metadata: Metadata = {
   description: "Elevate your workspace with the KULTRA 3.0mm solid Australian Merino wool felt desk mat. Features zero-slide micro-grip dot backing, -14dB keyboard noise dampening, and precision laser-cut edges. 30-Day Trial & Free US Shipping.",
   icons: {
     icon: [
-      { url: '/icon.svg', type: 'image/svg+xml' },
-      { url: '/favicon.ico', sizes: 'any' }
+      { url: '/icon?v=2', type: 'image/png', sizes: '32x32' },
+      { url: '/icon.svg?v=2', type: 'image/svg+xml' }
     ],
-    shortcut: '/favicon.ico',
-    apple: '/apple-icon.svg',
+    shortcut: '/favicon.ico?v=2',
+    apple: '/apple-icon?v=2',
   },
   keywords: [
     "wool desk mat",
@@ -119,7 +119,7 @@ export default function RootLayout({
           fetchPriority="high"
         />
 
-        {/* Microsoft Clarity Heatmaps Script (Loaded via lazyOnload to unblock critical path) */}
+        {/* Microsoft Clarity Heatmaps Script */}
         <Script
           id="microsoft-clarity"
           strategy="lazyOnload"
@@ -134,7 +134,7 @@ export default function RootLayout({
           }}
         />
 
-        {/* Google Analytics 4 Script (Loaded via lazyOnload to unblock critical path) */}
+        {/* Google Analytics 4 Script */}
         {GA_ID && GA_ID !== "G-XXXXXXXXXX" && (
           <>
             <Script
@@ -156,7 +156,7 @@ export default function RootLayout({
           </>
         )}
 
-        {/* Meta Pixel Script (Loaded via lazyOnload to unblock critical path) */}
+        {/* Meta Pixel Script */}
         {META_PIXEL_ID && META_PIXEL_ID !== "000000000000000" && (
           <Script
             id="meta-pixel"
