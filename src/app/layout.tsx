@@ -102,23 +102,19 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} h-full antialiased selection:bg-amber-200 selection:text-stone-900`}
     >
       <head>
-        {/* Preconnect & DNS-Prefetch Performance Hints */}
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://www.clarity.ms" />
-        <link rel="dns-prefetch" href="https://www.clarity.ms" />
-
         {/* Preload Hero LCP Image */}
         <link
           rel="preload"
           as="image"
           href="/images/products/kultra-australian-merino-wool-desk-mat-ash-gray.webp"
           type="image/webp"
+          fetchPriority="high"
         />
 
-        {/* Microsoft Clarity Heatmaps Script */}
+        {/* Microsoft Clarity Heatmaps Script (Loaded via lazyOnload to unblock critical path) */}
         <Script
           id="microsoft-clarity"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               (function(c,l,a,r,i,t,y){
@@ -130,16 +126,16 @@ export default function RootLayout({
           }}
         />
 
-        {/* Google Analytics 4 Script */}
+        {/* Google Analytics 4 Script (Loaded via lazyOnload to unblock critical path) */}
         {GA_ID && GA_ID !== "G-XXXXXXXXXX" && (
           <>
             <Script
-              strategy="afterInteractive"
+              strategy="lazyOnload"
               src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
             />
             <Script
               id="google-analytics"
-              strategy="afterInteractive"
+              strategy="lazyOnload"
               dangerouslySetInnerHTML={{
                 __html: `
                   window.dataLayer = window.dataLayer || [];
@@ -152,11 +148,11 @@ export default function RootLayout({
           </>
         )}
 
-        {/* Meta Pixel Script */}
+        {/* Meta Pixel Script (Loaded via lazyOnload to unblock critical path) */}
         {META_PIXEL_ID && META_PIXEL_ID !== "000000000000000" && (
           <Script
             id="meta-pixel"
-            strategy="afterInteractive"
+            strategy="lazyOnload"
             dangerouslySetInnerHTML={{
               __html: `
                 !function(f,b,e,v,n,t,s)
